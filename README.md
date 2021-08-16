@@ -1,6 +1,7 @@
 # MEV
-*Frontrun*: Paying high tx fees and optimizing network latency to anticipate and exploit, ordinary users' trades.
-*Priority Gas Auctions (PGAs)*: bots competitvely bidding up transaction fees in order to obtain priorty ordering, i.e., early block position and execution, for their transactions.
+***Frontrun***: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades. 
+<br />
+***Priority Gas Auctions (PGAs)***: Bots competitvely bidding up transaction fees in order to obtain priorty ordering, i.e., early block position and execution, for their transactions.
 
 ### MEV-Alpha
 - If you keep 1 wei of a token you are trading, you don't need to initialize the storage of a token. If you are trading on something for the first time, it costs a little bit extra gas than if you were to hold that 1 wei amount.
