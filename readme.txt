@@ -22,5 +22,6 @@ Look for:
 2) Before: Memory variables crerated AND used after
 3) After: Storage rights
 
-==== Resources Used ====
+==== Resources ====
 - https://arxiv.org/pdf/1904.05234.pdf
+- https://tinyurl.com/yjaf45lo (mock mempool viewer)
