@@ -33,12 +33,13 @@ Look for:
 - Do another review from the perspective of every actor in your threat model.
 - Run tools like Slither and review their output.
 - Glance over the test cases and code coverage.
-- 
+
 ----
 
 # Resources
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
+- https://consensys.github.io/smart-contract-best-practices/known_attacks/
 - https://github.com/ethereumbook/ether...
 - https://cryptozombies.io/
 - https://solidity-by-example.org/
