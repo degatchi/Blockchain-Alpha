@@ -25,14 +25,18 @@ Look for:
 3) After: Storage rights
 
 ## Auditing Approach
-- Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
-- Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
-- Create a threat model and make a list of theoretical attack vectors including all common pitfalls and past exploit techniques.
-- Look at places that can do value exchange. Especially functions like transfer, transferFrom, send, call, delegatecall, and selfdestruct. Walk backward from them to ensure they are secured properly.
-- Do a line-by-line review of the contracts.
-- Do another review from the perspective of every actor in your threat model.
-- Run tools like Slither and review their output.
-- Glance over the test cases and code coverage.
+Whilte auditing, always keep an open communication channel with the developers to make sure you can ask questions if you are not sure about what they intend something is meant to do.
+
+1) Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
+2) Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
+3) Create a threat model and make a list of theoretical attack vectors (thinking, "how would an attack try to exploit this contract?") including all common pitfalls (i.e., before Solidity 0.8.0, overflows and underflows weren't reverted and `SafeMath.sol` was required) and past exploit techniques (re-entrancy, flashloans, pool balance manipulation, etc).
+4) Look at places that can do value exchange, also checking if there are missing role requirements, allowing you to review the most critical functionality within a few hours. Especially functions like transfer, transferFrom, send, call, delegatecall, and selfdestruct. Walk backward from them to ensure they are secured properly (useful when viewing large codebases that have thousands of lines to review). Brain-storm new attacks for each smart contract - usually a day for each contract - creating proof-of-concept attacks (i.e., change a param to a certain something, going a different direction with the function flow, etc)
+5) Do a line-by-line review of the contracts. Looking for logic bugs (where the contract is not behaving in a way it is supposed to, i.e., the whitepaper and smart contract don't align) and making sure the contract is safe from the exploits listed earlier. 
+6) Do another review from the perspective of every actor in your threat model (i.e., liquidity provider, user swapping), calling the functions in various ways (the most common use cases and only after with uncommon use cases/combinations).
+7) Run tools like Slither and review their output.
+8) Glance over the test cases and code coverage.
+
+After telling the devs about the review, do another round of review, however not as comprehensive.
 
 ----
 
@@ -40,12 +44,10 @@ Look for:
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
 - https://consensys.github.io/smart-contract-best-practices/known_attacks/
+- https://www.certik.org/ (read existing audit reports)
 - https://github.com/ethereumbook/ether...
 - https://cryptozombies.io/
 - https://solidity-by-example.org/
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
 - https://ethernaut.openzeppelin.com/
-
-
-
