@@ -45,6 +45,11 @@ After telling the devs about the review, do another round of review, however not
 
 ----
 
+# Solidity 
+- Having multiple functions with the same naming convention with different params, i.e., `deposit(uint amount)`, `deposit(uint amount, address to)`, act as seperate functions.
+
+----
+
 # Resources
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
