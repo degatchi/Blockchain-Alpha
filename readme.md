@@ -25,7 +25,8 @@ Look for:
 3) After: Storage rights
 
 ## Auditing Approach
-Whilte auditing, always keep an open communication channel with the developers to make sure you can ask questions if you are not sure about what they intend something is meant to do.
+- While auditing, always keep an open communication channel with the developers to make sure you can ask questions if you are not sure about what they intend something is meant to do.
+- Write test cases/fuzzing for the most critical functions.
 
 1) Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
 2) Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
