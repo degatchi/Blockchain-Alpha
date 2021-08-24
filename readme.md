@@ -29,6 +29,7 @@ Look for:
 - Write test cases/fuzzing for the most critical functions.
 - If the dev patches/fixes are small and you are able to verify the changes you can continue, otherwise if the changes are large and change a good portion of the codebase, the current audit is essentially void and a new auditor should be used since reviewing a new codebase in such a small period of time wont be effective.
 - If the math is too complicated, beyond comprehension, tell the devs and recommend they find someone else suitable.
+- Informational adds: gas optimisation, linting, unnecessary code.
 
 
 1) Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
