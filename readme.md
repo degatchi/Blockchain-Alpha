@@ -50,6 +50,13 @@ After telling the devs about the review, do another round of review, however not
 
 ----
 
+# Persuasive Design
+Techniques used to direct and capture your attention for an extended period of time, inevitably forming habits and creating a dopamine feedback loop to keep you coming back to use the 'product'.
+
+https://line25.com/articles/persuasive-design-101
+
+----
+
 # Resources
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
