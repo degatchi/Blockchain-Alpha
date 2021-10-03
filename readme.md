@@ -68,3 +68,6 @@ https://line25.com/articles/persuasive-design-101
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
 - https://ethernaut.openzeppelin.com/
+
+## Security
+- https://secureum.substack.com/p/ethereum-101
