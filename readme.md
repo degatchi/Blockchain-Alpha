@@ -46,12 +46,20 @@ After telling the devs about the review, do another round of review, however not
 ----
 
 # Solidity 
-- Having multiple functions with the same naming convention with different params, i.e., `deposit(uint amount)`, `deposit(uint amount, address to)`, act as seperate functions.
-- When to use `memory`, `storage`, or `calldata`...
+Error Handling:
+- assert(bool condition): causes a Panic error and thus state change reversion if the condition is not met - to be used for internal errors.
+- require(bool condition): reverts if the condition is not met - to be used for errors in inputs or external components.
+
+<br /> 
+
+When to use `memory`, `storage`, or `calldata`:
 - Memory: When the var just has to be stored dudring a function execution.
 - Calldata: When the var has to be passed around in function calls (i.e., value is passed to another function)
 - Storage: When it has to be stored on-chain.
 
+<br /> 
+
+- Having multiple functions with the same naming convention with different params, i.e., `deposit(uint amount)`, `deposit(uint amount, address to)`, act as seperate functions.
 ----
 
 # Persuasive Design
