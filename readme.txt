@@ -43,6 +43,25 @@ Look for:
 
 After telling the devs about the review, do another round of review, however not as comprehensive.
 
+Do you have any advice for people who would like to go into this area of using formal verification on blockchain protocols and smart contracts? E.g. what are the pre-requisites? And if one is interested, what are the companies that we can apply for?
+Leo Alt:
+I think learning how to use the FV tools to their best, and a bit of how they work, will give you both practical experience in the topic + give you pointers to learn more about the theoretical aspects if you're interested. As far as companies go I can't really say specific names, but I guess companies that use FV for their audits.
+
+What are the 3 first things you look at in Smart Contracts?
+Mudit:
+1) Architecture 
+2) Access control
+3) Fund transfers
+
+Leo Alt:
+As a very quick thought, accesses that public/external functions give, unsafe external calls and assembly.
+
+Smart contract audits should not be used as stamps of approvals. Words like "Passed audit" are a big red flag. Audits are basically detailed code reviews. They do not guarantee security. It's very hard to quantify/standardize such a process. This is why there are so many shitty audit firms around. I don't expect reputable firms to take "personal loss" in case of accidents. That's a completely different product offering (Insurance). However, I do expect Insurance providers and Code auditors to work closely in the future.
+
+What CTFs/war games/materials do you recommend doing for someone aspiring to take your #1 spot on Code4rena?
+Christoph (ranked #1 hacker on Code4rena):
+I started out doing Damn Vulnerable Defi https://cmichel.io/damn-vulnerable-de-fi-solutions/, Ethernaut https://cmichel.io/ethernaut-solutions/ and Capture The Ether https://cmichel.io/capture-the-ether-solutions/. The links here include my solutions if you get stuck but try to do it on your own first. Another great way that got me in contact with other auditors and all major auditing firms was Paradigm CTF https://cmichel.io/paradigm-ctf-2021-solutions/
+
 ----
 
 # Solidity 
