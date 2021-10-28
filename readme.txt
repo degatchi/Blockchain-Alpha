@@ -140,3 +140,4 @@ https://line25.com/articles/persuasive-design-101
 
 ## Security
 - https://secureum.substack.com/p/ethereum-101
+- https://github.com/leonardoalt/ethereum_formal_verification_overview
