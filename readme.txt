@@ -18,6 +18,9 @@
 
 # Auditing
 
+- You should use msg.sender for authorization (if another contract calls your contract msg.sender will be the address of the contract and not the address of the user who called the contract). It's also worth mentioning that by using tx.origin you're limiting interoperability between contracts because the contract that uses tx.origin cannot be used by another contract as a contract can't be the tx.origin. https://ethereum-contract-security-techniques-and-tips.readthedocs.io/en/latest/recommendations/#avoid-using-txorigin
+
+
 Mudit:
 
 Data from 16 case studies of 2020 DeFi exploits show that 1) 72.3% of hacks come from the Financial Model: e.g. interplay between bonding curve and constant product amm, Balancer hack 29/06/2020, 2) 27.4% from Insecure Implementations: e.g. re-entrancy & 3) 0.3% from Arbitrage. Why is this so? Insecure implementations have been well-studied by past works, so many existing auditing tools can catch them (i.e. slither). But *none* of the existing tools can check for financial model unsoundness!
