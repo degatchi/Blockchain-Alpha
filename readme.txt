@@ -149,6 +149,7 @@ https://line25.com/articles/persuasive-design-101
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
 - https://ethernaut.openzeppelin.com/
+- https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimisations (MSTORE, MLOAD, SSTORE, SLOAD)
 
 ## Security
 - https://secureum.substack.com/p/ethereum-101
