@@ -138,7 +138,7 @@ https://line25.com/articles/persuasive-design-101
 
 ----
 
-# Resources
+Resources
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
 - https://consensys.github.io/smart-contract-best-practices/known_attacks/
@@ -151,7 +151,10 @@ https://line25.com/articles/persuasive-design-101
 - https://ethernaut.openzeppelin.com/
 - https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimisations (MSTORE, MLOAD, SSTORE, SLOAD)
 
-## Security
+Security
 - https://secureum.substack.com/p/ethereum-101
 - https://github.com/leonardoalt/ethereum_formal_verification_overview
 - https://github.com/crytic/awesome-ethereum-security
+
+Podcasts
+- https://www.youtube.com/watch?v=Pw6ch5c89Iw (Daniele Sesta on popscile finance and MIM, SPELL) 
