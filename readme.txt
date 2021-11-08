@@ -138,6 +138,11 @@ https://line25.com/articles/persuasive-design-101
 
 ----
 
+Cash Out
+- https://www.youtube.com/watch?v=hSHE4Exx1O4 crypto lawyer for moving to portugal + golden visa plan https://map-advogados.com/en/
+
+----
+
 Resources
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
