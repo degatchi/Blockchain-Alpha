@@ -163,3 +163,6 @@ Security
 
 Podcasts
 - https://www.youtube.com/watch?v=Pw6ch5c89Iw (Daniele Sesta on popscile finance and MIM, SPELL) 
+
+Articles
+- https://samczsun.com/author/samczsun/
