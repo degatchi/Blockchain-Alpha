@@ -23,7 +23,7 @@
 - You should use msg.sender for authorization (if another contract calls your contract msg.sender will be the address of the contract and not the address of the user who called the contract). It's also worth mentioning that by using tx.origin you're limiting interoperability between contracts because the contract that uses tx.origin cannot be used by another contract as a contract can't be the tx.origin. https://ethereum-contract-security-techniques-and-tips.readthedocs.io/en/latest/recommendations/#avoid-using-txorigin
 
 
-*** Alexander Schlindwein (Fei Protocol vulnerability finder):
+### Alexander Schlindwein (Fei Protocol vulnerability finder):
 Q) What general advice would you give to aspiring blockchain bug bounty hunters?
 A) A great way to get started learning about smart contract exploits is to practice by participating in wargames and CTFs. You can find some good ones in https://github.com/crytic/awesome-ethereum-security 's repository.
 
