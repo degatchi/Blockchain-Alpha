@@ -1,6 +1,8 @@
 # Blurb
 A collection of valuable info for the curious minds of blockchain development
 
+---
+
 # Founding/Start-up
 - A record of advice and things i've learned while cofounding, working for other protocols + developing protocols.
 ### Notes
@@ -25,6 +27,8 @@ A collection of valuable info for the curious minds of blockchain development
 1. Distribution (growing channels & exposure)
 2. Driving conversions (sales, clicks, subscribes)
 3. Developing a brand (consistent & reputable)
+
+---
 
 # MEV
 - Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
