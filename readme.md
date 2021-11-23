@@ -1,33 +1,39 @@
 # A collection of valuable info for the curious minds of blockchain development
 
 # MEV
-- Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades. 
+
+- Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
 - Priority Gas Auctions (PGAs): Bots competitvely bidding up transaction fees in order to obtain priorty ordering, i.e., early block position and execution, for their transactions.
 - Pure revenue opportunities: A specific sub-category of DEX arbitrage representative of broader activity, these are blockchain transactions that issue multiple trades atomically through a smart contract and profit unconditionally in every traded asset.
-- Miner-extractable value (MEV): We introduce the notion of MEV, value that is extractable by miners directly from smart contracts as cryptocurrency profits. One particular source of MEV is *ordering optimization (OO)* fees, which result from a miner’s control of the ordering of transactions in a particular epoch.
+- Miner-extractable value (MEV): We introduce the notion of MEV, value that is extractable by miners directly from smart contracts as cryptocurrency profits. One particular source of MEV is _ordering optimization (OO)_ fees, which result from a miner’s control of the ordering of transactions in a particular epoch.
 - Time-bandit attacks: We show that high-MEV regimes in general lead to a new attack in which miners rewrite blockchain history to steal funds allocated by smart contracts in the past.
 
 ## Alpha
+
 - Use Golang for high speed and optimisation - GETH is written in Golang.
 - If you keep 1 wei of a token you are trading, you don't need to initialize the storage of a token. If you are trading on something for the first time, it costs a little bit extra gas than if you were to hold that 1 wei amount. Look at this bot's wallet `https://etherscan.io/address/0x000000000035b5e5ad9019092c665357240f594e#code`, you can see there are dozens of tokens with $0.00 value.
 - Sandwich attack a liquidity providing tx by adding a ton of liquidity before it (front-running) then withdrawing after the user puts their LP in. Why? To get the fees from user providing liquidity. This is effectively making a LP limit order - you need to have a broader perspective on the market + adjust your portfolio to achieve this.
 - Why does extreme optimization matter, i.e. 50ms difference? 1) Speed matters a lot more in non-flashbots markets 2) faster simulation means we can search more broadly in the mempool and pick up things competitors don't & 3) to compete in PGAs
 
 ## Frontrunning
+
 - In order to frontrun, you need to run a node so you can access the mempool. Why? To see awaiting txs and replicate them with higher fees to be executed before them.
 
-----
+---
 
 # Auditing
 
 ### Notes
+
 - You should use msg.sender for authorization (if another contract calls your contract msg.sender will be the address of the contract and not the address of the user who called the contract). It's also worth mentioning that by using tx.origin you're limiting interoperability between contracts because the contract that uses tx.origin cannot be used by another contract as a contract can't be the tx.origin. https://ethereum-contract-security-techniques-and-tips.readthedocs.io/en/latest/recommendations/#avoid-using-txorigin
 
 <br />
 
 ## Q+A
+
 ### Alexander Schlindwein: Fei Protocol vulnerability finder
-Q) What general advice would you give to aspiring blockchain bug bounty hunters? 
+
+Q) What general advice would you give to aspiring blockchain bug bounty hunters?
 <br /> A) A great way to get started learning about smart contract exploits is to practice by participating in wargames and CTFs. You can find some good ones in https://github.com/crytic/awesome-ethereum-security 's repository.
 
 Also, do not get discouraged if you haven’t found a bug yet, even though you have spent a lot of time searching. Often you will be working with code that has been audited by world-class security experts and put through extensive testing. That does not mean that there are no bugs, though — an audit is no guarantee for security and the list of audited projects which have been exploited is long enough.
@@ -37,40 +43,44 @@ In fact, both ArmorFi and Fei Protocol were audited. This is the reason Immunefi
 <br />
 
 ### Mudit: Security Researcher and Developer, helping SushiSwap build their next gen AMM - Trident
-Data from 16 case studies of 2020 DeFi exploits show that 1) 72.3% of hacks come from the Financial Model: e.g. interplay between bonding curve and constant product amm, Balancer hack 29/06/2020, 2) 27.4% from Insecure Implementations: e.g. re-entrancy & 3) 0.3% from Arbitrage. Why is this so? Insecure implementations have been well-studied by past works, so many existing auditing tools can catch them (i.e. slither). But *none* of the existing tools can check for financial model unsoundness!
+
+Data from 16 case studies of 2020 DeFi exploits show that 1) 72.3% of hacks come from the Financial Model: e.g. interplay between bonding curve and constant product amm, Balancer hack 29/06/2020, 2) 27.4% from Insecure Implementations: e.g. re-entrancy & 3) 0.3% from Arbitrage. Why is this so? Insecure implementations have been well-studied by past works, so many existing auditing tools can catch them (i.e. slither). But _none_ of the existing tools can check for financial model unsoundness!
 
 Look for:
-1) Before: Control Flow (e.g., if, return, require)
-2) Before: Memory variables crerated AND used after
-3) After: Storage rights
+
+1. Before: Control Flow (e.g., if, return, require)
+2. Before: Memory variables crerated AND used after
+3. After: Storage rights
 
 Auditing Approach
+
 - While auditing, always keep an open communication channel with the developers to make sure you can ask questions if you are not sure about what they intend something is meant to do.
 - Write test cases/fuzzing for the most critical functions.
 - If the dev patches/fixes are small and you are able to verify the changes you can continue, otherwise if the changes are large and change a good portion of the codebase, the current audit is essentially void and a new auditor should be used since reviewing a new codebase in such a small period of time wont be effective.
 - If the math is too complicated, beyond comprehension, tell the devs and recommend they find someone else suitable.
 - Informational adds: gas optimisation, linting, unnecessary code.
 
-
-1) Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
-2) Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
-3) Create a threat model and make a list of theoretical attack vectors (thinking, "how would an attack try to exploit this contract?") including all common pitfalls (i.e., before Solidity 0.8.0, overflows and underflows weren't reverted and `SafeMath.sol` was required) and past exploit techniques (re-entrancy, flashloans, pool balance manipulation, etc).
-4) Look at places that can do value exchange, also checking if there are missing role requirements, allowing you to review the most critical functionality within a few hours. Especially functions like transfer, transferFrom, send, call, delegatecall, and selfdestruct. Walk backward from them to ensure they are secured properly (useful when viewing large codebases that have thousands of lines to review). Brain-storm new attacks for each smart contract - usually a day for each contract - creating proof-of-concept attacks (i.e., change a param to a certain something, going a different direction with the function flow, etc)
-5) Do a line-by-line review of the contracts. Looking for logic bugs (where the contract is not behaving in a way it is supposed to, i.e., the whitepaper and smart contract don't align) and making sure the contract is safe from the exploits listed earlier. 
-6) Do another review from the perspective of every actor in your threat model (i.e., liquidity provider, user swapping), calling the functions in various ways (the most common use cases and only after with uncommon use cases/combinations).
-7) Run tools like Slither and review their output.
-8) Glance over the test cases and code coverage.
+1. Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
+2. Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
+3. Create a threat model and make a list of theoretical attack vectors (thinking, "how would an attack try to exploit this contract?") including all common pitfalls (i.e., before Solidity 0.8.0, overflows and underflows weren't reverted and `SafeMath.sol` was required) and past exploit techniques (re-entrancy, flashloans, pool balance manipulation, etc).
+4. Look at places that can do value exchange, also checking if there are missing role requirements, allowing you to review the most critical functionality within a few hours. Especially functions like transfer, transferFrom, send, call, delegatecall, and selfdestruct. Walk backward from them to ensure they are secured properly (useful when viewing large codebases that have thousands of lines to review). Brain-storm new attacks for each smart contract - usually a day for each contract - creating proof-of-concept attacks (i.e., change a param to a certain something, going a different direction with the function flow, etc)
+5. Do a line-by-line review of the contracts. Looking for logic bugs (where the contract is not behaving in a way it is supposed to, i.e., the whitepaper and smart contract don't align) and making sure the contract is safe from the exploits listed earlier.
+6. Do another review from the perspective of every actor in your threat model (i.e., liquidity provider, user swapping), calling the functions in various ways (the most common use cases and only after with uncommon use cases/combinations).
+7. Run tools like Slither and review their output.
+8. Glance over the test cases and code coverage.
 
 After telling the devs about the review, do another round of review, however not as comprehensive.
 
 What are the 3 first things you look at in Smart Contracts?
-1) Architecture 
-2) Access control
-3) Fund transfers
+
+1. Architecture
+2. Access control
+3. Fund transfers
 
 <br />
 
 ### Leo Alt: Researcher and Formal Verification Lead at the Ethereum Foundation
+
 Q) Do you have any advice for people who would like to go into this area of using formal verification on blockchain protocols and smart contracts? E.g. what are the pre-requisites? And if one is interested, what are the companies that we can apply for?
 <br />A) I think learning how to use the FV tools to their best, and a bit of how they work, will give you both practical experience in the topic + give you pointers to learn more about the theoretical aspects if you're interested. As far as companies go I can't really say specific names, but I guess companies that use FV for their audits.
 
@@ -81,6 +91,7 @@ Smart contract audits should not be used as stamps of approvals. Words like "Pas
 <br />
 
 ### Christoph: Ranked #1 hacker on Code4rena
+
 Q) What CTFs/war games/materials do you recommend doing for someone aspiring to take your #1 spot on Code4rena?
 <br />A) I started out doing Damn Vulnerable Defi https://cmichel.io/damn-vulnerable-de-fi-solutions/, Ethernaut https://cmichel.io/ethernaut-solutions/ and Capture The Ether https://cmichel.io/capture-the-ether-solutions/. The links here include my solutions if you get stuck but try to do it on your own first. Another great way that got me in contact with other auditors and all major auditing firms was Paradigm CTF https://cmichel.io/paradigm-ctf-2021-solutions/
 
@@ -94,24 +105,27 @@ How much time do you spend on a contract on average till you "stop" looking at i
 How much do you use tools and how much is really looking at the code and manual work? <br />
 How do you make sure that your possible exploit really is possible when most C4 code is not deployed yet? <br />
 And: Do you have N/A too or do you report only 100% sure vulns? <br />
+
 1. That's a good question. I could always spend more time on the code and it would increase the likelihood of me finding bugs. But at some point, there's the point of "diminishing returns", where it's not reasonable to spend any more time on the code. Alexander Schlindwein was asked the same question regarding bug bounties but I think it applies to audits as well:
-The approach which works best for me is to set myself the goal of fully understanding the system to the point where I could reimplement it from scratch without being allowed a look at the original codebase. Not from remembering the code, but from having understood what the application is supposed to do. If you have examined a project that far and have not found a bug, the chances of finding one by continuing is low. https://medium.com/immunefi/interview-with-legendary-bug-bounty-hunter-alexander-schlindwein-cced9c73c02a
-Realistically, I often stop before reaching that point due to time constraints and opportunity costs when I think my limited time is better spent elsewhere.
+   The approach which works best for me is to set myself the goal of fully understanding the system to the point where I could reimplement it from scratch without being allowed a look at the original codebase. Not from remembering the code, but from having understood what the application is supposed to do. If you have examined a project that far and have not found a bug, the chances of finding one by continuing is low. https://medium.com/immunefi/interview-with-legendary-bug-bounty-hunter-alexander-schlindwein-cced9c73c02a
+   Realistically, I often stop before reaching that point due to time constraints and opportunity costs when I think my limited time is better spent elsewhere.
 2. 100% manual work for me
 3. I definitely have N/As as well as I cannot code up a reproduction in a test framework for every issue I find. It would take too much time and I only do it for complex critical issues. Personally, I also think it's better to err on the side of "this looks like an issue to me, so I'll submit it" than "not sure if it's an issue, I keep it to myself". I've had devs tell me that even though my submission was wrong, they feel more confident in their code now because they reviewed the issue again. I'd like to stress though that I really appreciate it when a protocol has a great test setup that allows me to easily add a new test case without having to write huge amounts of setup code to get the protocol into the desired state first.
 
 Q) Can you describe/breakdown your auditing process?
+
 1. Besides the technical skills like knowing many types of exploits, knowing the EVM well, or having seen issues of similar protocols, some personality traits that I think are useful: conscientiousness - I feel like some auditors don't even try to find all bugs and just want to be done with their job as quickly as possible. This happens especially if the incentives are not aligned and you get paid a fixed salary as is often the case with traditional auditing firms. So you want to hire people that are conscientious, who take their job seriously and take pride in their work.
 2. You don't need cryptography knowledge to be an auditor but I see more and more math-heavy DeFi protocols, so being good at math is definitely a plus.
 3. My income streams are 1) Code4rena 2) audits of protocols that reach out to me 3) investments 4) onlyfans
 4. My auditing process is pretty straightforward. First I read the documentation. Then I read the code from top to bottom, I order the contracts in a way that makes sense: for example, I read the base class contract first before I read the derived class contract. I don't use any tools, but I heavily take notes and scribble all over the code. 😃 I'm using the "Solidity Visual Developer" extension which comes with the @audit, @audit-info, @audit-ok, @audit-issue markers which I all use to categorize my notes. After I read the entire codebase once I revisit my notes and resolve any loose ends or things I didn't understand earlier. Afterwards, I create my audit report out of these notes.
- 
+
 Q) Any must-reads on auditing you recommend? <br />
 A) Subscribe to the "BlockThreat Newsletter" by https://twitter.com/_iphelix.
-It's a weekly newsletter consisting of all security incidents, post mortems, and other security-related topics that happened in the past week. @Rajeev | Secureum list is great and compact https://secureum.substack.com/p/smart-contract-security-101-secureum 
+It's a weekly newsletter consisting of all security incidents, post mortems, and other security-related topics that happened in the past week. @Rajeev | Secureum list is great and compact https://secureum.substack.com/p/smart-contract-security-101-secureum
 
 Q) Salary for auditors based on experience/skin level? <br />
 A) I'm not an expert on this but I'd say hourly rates for auditors are roughly:
+
 - Junior: 100$/h
 - Experienced: 100$-250$/h
 - Top Auditors: 250$-1000$/h
@@ -119,7 +133,9 @@ A) I'm not an expert on this but I'd say hourly rates for auditors are roughly:
 <br />
 
 ### Samczsun: Research Partner at Paradigm, focused on supporting portfolio companies and researching security and related topics, prev ToB
+
 If you're asking for what I think the three most common vulnerabilities are, I would say
+
 - missing input validation (not checking if a token is legit, etc)
 - improper access control (function should be private but is public, should be onlyOwner but isn't, etc)
 - bad math
@@ -141,14 +157,17 @@ Q) What is your tooling like? <br />
 A) My tooling is very simple.
 
 Browsing source code:
+
 - GitHub web, for smaller projects (basically most projects, I did my review of Uniswap v3 on GitHub)
 - VSCode, for bigger projects (0x v4)
 
 Exploit development:
+
 - Remix
 - A custom remix plugin to let me write quick scripts (impersonate accounts, print debug messages, etc). You can do the same with Hardhat/hevm, I'm just too used to my workflow now
 
 Finding random things on-chain
+
 - etherscan.io
 - ethtx.info
 - ethervm.io
@@ -163,12 +182,13 @@ A) If it's a small enough codebase, I skim and audit at the same time, getting a
 Q) Any recommended must-read resources on security/auditing? <br />
 A) Nothing in particular, I wouldn't attribute my knowledge to any one (or n < 3) blog post or the like. My number one recommendation is always to just go out there and do the thing, whether it's on live contracts (Immunefi) or CTFs (there's this really neat one called Paradigm CTF 😉)
 
-Q) Is there a better model than requiring auditors (where the cards are so heavily stacked against them)?  rugdoc seems to cover lots of contracts at a fast time
+Q) Is there a better model than requiring auditors (where the cards are so heavily stacked against them)? rugdoc seems to cover lots of contracts at a fast time <br />
 A) imo auditors should be extremely vocal about the fact that audits aren't guarantees of security but simply third-party code reviews, and they should make sure that their clients don't treat it as such. Right now things are so bad that a handful of auditors are singlehandedly killing the reputation of the space as a whole because they keep producing reports which they themselves present as guarantees of security, only for the project to be hacked because they missed a critical bug or two.
 
 <br />
 
 ### Tincho: security researcher at OpenZeppelin
+
 Q) In terms of security; What are the 3 first things you look at in Smart Contracts? <br />
 A) That's an easy one. You go top to bottom. So first 3 things are pragma, imports and the contract's name 😛
 The reality is that my specific steps will change depending on what I'm looking at. So I first need to understand what is it that I'm looking at, at least from a conceptual level. So documentation, tests, whitepapers, etc. are handy. And I usually start there. The goal is to understand the architecture and the main roles. I'm a visual thinker, so at this point I draw a lot. I should also say that documentation can be deceiving, so I try to have a healthy distrust for it.
@@ -185,42 +205,50 @@ For note taking, some fellow auditors use smarter note taking apps such as Obsid
 Q) What advice do you have for someone coming in for an entry-level position, how do they position themselves to get noticed by security companies out there? What do they do to improve their skills. <br />
 A) Good one. Ok so there are two separate questions, not necessarily one tied to the other. Long answer coming!
 To improve your skills, I can at least tell you what I did (and continue doing):
+
 - Play every smart contract CTF available out there (in increasing complexity, probably Capture The Ether, Ethernaut, Damn Vulnerable DeFi, Paradigm CTF), and hit your head against the walls until you solve the challenges. At the end it's not about the actual solution what matters, but the learning process you went through to reach that solution.
 - Read most (if not all) vulnerability incidents, post mortems and similar material that is published, and take your time to understand them. But distrust the publisher, and actually try to reproduce the exact vulnerability and attack yourself. If you can code proof of concept exploits, that's also cool. I've been doing this quite often lately for vulnerabilities that catch my attention, and honestly it's been a great way to continue learning about vulnerabilities, attack vectors, tooling, etc.
 - Skim through published audit reports, and read issues that are interesting for you, if any. You'll learn what kind of things are being found, how they're reported, and how they're solved. Which is a nice exercise - at least has been useful for me.
 - Participate in workshops, conferences, etc, either live or watching recordings. Some talks you'll like, some you won't and you'll just close after 5 min. But give yourself the chance to be exposed to something new that's being shared by a security researcher, and probably you'll learn something you did not know, or you'll refresh on previous stuff.
-- I haven't done this actually, but  I guess that trying to participate in bug bounty programs or in contests can be a cool way to start putting your skills to use, even if the things you end up finding are low/informational. You'll get exposure to real Solidity code and its intricacies, which is always nice.
+- I haven't done this actually, but I guess that trying to participate in bug bounty programs or in contests can be a cool way to start putting your skills to use, even if the things you end up finding are low/informational. You'll get exposure to real Solidity code and its intricacies, which is always nice.
 - Either as an independent security researcher, or as an employee of a security firm, but force yourself to start making a living out of this. You'll get real exposure to code, projects, vulnerabilities, incidents, and all sort of knowledge that you'll only get if you're every single day working on this.
-On how to get noticed, I'd say that usually having a personal blog in which you write about the stuff you learn, research you're doing, CTF challenges you solve, writeups of bounties you've earned, and similar, it's a great way to show your work and skills. Also if you're more of a coder, a public GitHub with your own projects or solid contributions to open-source libraries and tools (related to security) can also be useful. Participating as speaker in security-related conferences is another one. Or just sharing in Twitter cool stuff. I don't know, probably there are lots of other ways, and sometimes even depends on what each security firm is looking for.
+  On how to get noticed, I'd say that usually having a personal blog in which you write about the stuff you learn, research you're doing, CTF challenges you solve, writeups of bounties you've earned, and similar, it's a great way to show your work and skills. Also if you're more of a coder, a public GitHub with your own projects or solid contributions to open-source libraries and tools (related to security) can also be useful. Participating as speaker in security-related conferences is another one. Or just sharing in Twitter cool stuff. I don't know, probably there are lots of other ways, and sometimes even depends on what each security firm is looking for.
 
-----
+---
 
-# Solidity 
+# Solidity
+
 Error Handling:
+
 - assert(bool condition): causes a Panic error and thus state change reversion if the condition is not met - to be used for internal errors.
 - require(bool condition): reverts if the condition is not met - to be used for errors in inputs or external components.
 
 When to use `memory`, `storage`, or `calldata`:
+
 - Memory: When the var just has to be stored dudring a function execution.
 - Calldata: When the var has to be passed around in function calls (i.e., value is passed to another function)
 - Storage: When it has to be stored on-chain.
 
 - Having multiple functions with the same naming convention with different params, i.e., `deposit(uint amount)`, `deposit(uint amount, address to)`, act as seperate functions.
-----
+
+---
 
 # Persuasive Design
+
 Techniques used to direct and capture your attention for an extended period of time, inevitably forming habits and creating a dopamine feedback loop to keep you coming back to use the 'product'.
 
 https://line25.com/articles/persuasive-design-101
 
-----
+---
 
 # Investment
+
 - https://www.youtube.com/watch?v=hSHE4Exx1O4 crypto lawyer for moving to portugal + golden visa plan https://map-advogados.com/en/
 
-----
+---
 
 # Resources
+
 - https://arxiv.org/pdf/1904.05234.pdf
 - https://tinyurl.com/yjaf45lo (mock mempool viewer)
 - https://consensys.github.io/smart-contract-best-practices/known_attacks/
@@ -234,12 +262,15 @@ https://line25.com/articles/persuasive-design-101
 - https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimisations (MSTORE, MLOAD, SSTORE, SLOAD)
 
 Security
+
 - https://secureum.substack.com/p/ethereum-101
 - https://github.com/leonardoalt/ethereum_formal_verification_overview
 - https://github.com/crytic/awesome-ethereum-security
 
 Podcasts
-- https://www.youtube.com/watch?v=Pw6ch5c89Iw (Daniele Sesta on popscile finance and MIM, SPELL) 
+
+- https://www.youtube.com/watch?v=Pw6ch5c89Iw (Daniele Sesta on popscile finance and MIM, SPELL)
 
 Articles
+
 - https://samczsun.com/author/samczsun/
