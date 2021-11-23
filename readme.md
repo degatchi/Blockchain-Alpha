@@ -1,16 +1,41 @@
-# A collection of valuable info for the curious minds of blockchain development
+# Blurb
+A collection of valuable info for the curious minds of blockchain development
+
+# Founding/Start-up
+- A record of advice and things i've learned while cofounding, working for other protocols + developing protocols.
+### Notes
+- Build + ship quick. Have a working product w/ a basic UI and work from there.
+- Don't burn out. Take breaks + don't work 24/7 bc taking a step back will allow you to take 3 more steps forward and be able to do this more consistently.
+- Community > Product. Make sure products are being shipped, etc. However, without a community, the product is non-existent. It's much harder to bring back community members then it is to get them.
+- Deliver + be transparent. If you need more time to ship, announce that. Investors do not want to be left in the dark. Not being transparent will deter investors.
+
+### Expansion
+- Make a payroll system
+- Get a team of people better than you
+- Modularize! There is only so much you can do with your time.
+- Have a fund pool to pay for audits, marketing, listings, contractors, partnerships, etc.
+- Give real use-case-tests to people you interview to test what they are capable of.
+
+### Protocol Development
+- Think of an idea from scratch or improve someone else's idea/product.
+- Innovate, ship, research, repeat. Do this as fast as possible. There is an abundance of capital in the cryptosphere. You need to take advantage of these opportunities! Release a V-0, then V-1, then V-2 - each having considerable improvements.
+
+### Marketing
+90% of marketing problems startups face are:
+1. Distribution (growing channels & exposure)
+2. Driving conversions (sales, clicks, subscribes)
+3. Developing a brand (consistent & reputable)
 
 # MEV
-
 - Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
-- Priority Gas Auctions (PGAs): Bots competitvely bidding up transaction fees in order to obtain priorty ordering, i.e., early block position and execution, for their transactions.
+- Priority Gas Auctions (PGAs): Bots competitively bidding up transaction fees in order to obtain priority ordering, i.e., early block position and execution, for their transactions.
 - Pure revenue opportunities: A specific sub-category of DEX arbitrage representative of broader activity, these are blockchain transactions that issue multiple trades atomically through a smart contract and profit unconditionally in every traded asset.
 - Miner-extractable value (MEV): We introduce the notion of MEV, value that is extractable by miners directly from smart contracts as cryptocurrency profits. One particular source of MEV is _ordering optimization (OO)_ fees, which result from a miner’s control of the ordering of transactions in a particular epoch.
 - Time-bandit attacks: We show that high-MEV regimes in general lead to a new attack in which miners rewrite blockchain history to steal funds allocated by smart contracts in the past.
 
 ## Alpha
 
-- Use Golang for high speed and optimisation - GETH is written in Golang.
+- Use Golang for high speed and optimization - GETH is written in Golang.
 - If you keep 1 wei of a token you are trading, you don't need to initialize the storage of a token. If you are trading on something for the first time, it costs a little bit extra gas than if you were to hold that 1 wei amount. Look at this bot's wallet `https://etherscan.io/address/0x000000000035b5e5ad9019092c665357240f594e#code`, you can see there are dozens of tokens with $0.00 value.
 - Sandwich attack a liquidity providing tx by adding a ton of liquidity before it (front-running) then withdrawing after the user puts their LP in. Why? To get the fees from user providing liquidity. This is effectively making a LP limit order - you need to have a broader perspective on the market + adjust your portfolio to achieve this.
 - Why does extreme optimization matter, i.e. 50ms difference? 1) Speed matters a lot more in non-flashbots markets 2) faster simulation means we can search more broadly in the mempool and pick up things competitors don't & 3) to compete in PGAs
@@ -49,7 +74,7 @@ Data from 16 case studies of 2020 DeFi exploits show that 1) 72.3% of hacks come
 Look for:
 
 1. Before: Control Flow (e.g., if, return, require)
-2. Before: Memory variables crerated AND used after
+2. Before: Memory variables created AND used after
 3. After: Storage rights
 
 Auditing Approach
@@ -58,7 +83,7 @@ Auditing Approach
 - Write test cases/fuzzing for the most critical functions.
 - If the dev patches/fixes are small and you are able to verify the changes you can continue, otherwise if the changes are large and change a good portion of the codebase, the current audit is essentially void and a new auditor should be used since reviewing a new codebase in such a small period of time wont be effective.
 - If the math is too complicated, beyond comprehension, tell the devs and recommend they find someone else suitable.
-- Informational adds: gas optimisation, linting, unnecessary code.
+- Informational adds: gas optimization, linting, unnecessary code.
 
 1. Read about the project to get an idea of what the smart contracts are meant to do. Glance over all the resources about the project that were made available to you.
 2. Glance over the smart contracts to get an idea of the smart contracts architecture. Tools like Surya can come in handy.
