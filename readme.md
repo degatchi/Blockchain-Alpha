@@ -20,10 +20,13 @@
 
 # Auditing
 
+### Notes
 - You should use msg.sender for authorization (if another contract calls your contract msg.sender will be the address of the contract and not the address of the user who called the contract). It's also worth mentioning that by using tx.origin you're limiting interoperability between contracts because the contract that uses tx.origin cannot be used by another contract as a contract can't be the tx.origin. https://ethereum-contract-security-techniques-and-tips.readthedocs.io/en/latest/recommendations/#avoid-using-txorigin
 
+<br />
 
-### Alexander Schlindwein (Fei Protocol vulnerability finder):
+## Q+A
+### Alexander Schlindwein: Fei Protocol vulnerability finder
 Q) What general advice would you give to aspiring blockchain bug bounty hunters?
 A) A great way to get started learning about smart contract exploits is to practice by participating in wargames and CTFs. You can find some good ones in https://github.com/crytic/awesome-ethereum-security 's repository.
 
@@ -31,9 +34,9 @@ Also, do not get discouraged if you haven’t found a bug yet, even though you h
 
 In fact, both ArmorFi and Fei Protocol were audited. This is the reason Immunefi exists in the first place. Yet, it is easy to get lost in the fallacy of feeling like you are wasting your time when you spend hours upon hours while apparently not achieving any result. In these moments, it is good to remember yourself that even in periods of low or no findings, the knowledge and insight you are gaining by studying and trying to exploit smart contracts will in the long run equip you with a skillset only very few people have, which in itself will be more than rewarding.
 
+<br />
 
-
-### Mudit: Security Researcher and Developer, helping SushiSwap build their next gen AMM - Trident.
+### Mudit: Security Researcher and Developer, helping SushiSwap build their next gen AMM - Trident
 Data from 16 case studies of 2020 DeFi exploits show that 1) 72.3% of hacks come from the Financial Model: e.g. interplay between bonding curve and constant product amm, Balancer hack 29/06/2020, 2) 27.4% from Insecure Implementations: e.g. re-entrancy & 3) 0.3% from Arbitrage. Why is this so? Insecure implementations have been well-studied by past works, so many existing auditing tools can catch them (i.e. slither). But *none* of the existing tools can check for financial model unsoundness!
 
 Look for:
@@ -65,6 +68,7 @@ What are the 3 first things you look at in Smart Contracts?
 2) Access control
 3) Fund transfers
 
+<br />
 
 ### Leo Alt: Researcher and Formal Verification Lead at the Ethereum Foundation
 Q) Do you have any advice for people who would like to go into this area of using formal verification on blockchain protocols and smart contracts? E.g. what are the pre-requisites? And if one is interested, what are the companies that we can apply for?
@@ -74,8 +78,9 @@ As a very quick thought, accesses that public/external functions give, unsafe ex
 
 Smart contract audits should not be used as stamps of approvals. Words like "Passed audit" are a big red flag. Audits are basically detailed code reviews. They do not guarantee security. It's very hard to quantify/standardize such a process. This is why there are so many shitty audit firms around. I don't expect reputable firms to take "personal loss" in case of accidents. That's a completely different product offering (Insurance). However, I do expect Insurance providers and Code auditors to work closely in the future.
 
+<br />
 
-### Christoph: Ranked #1 hacker on Code4rena:
+### Christoph: Ranked #1 hacker on Code4rena
 Q) What CTFs/war games/materials do you recommend doing for someone aspiring to take your #1 spot on Code4rena?
 A) I started out doing Damn Vulnerable Defi https://cmichel.io/damn-vulnerable-de-fi-solutions/, Ethernaut https://cmichel.io/ethernaut-solutions/ and Capture The Ether https://cmichel.io/capture-the-ether-solutions/. The links here include my solutions if you get stuck but try to do it on your own first. Another great way that got me in contact with other auditors and all major auditing firms was Paradigm CTF https://cmichel.io/paradigm-ctf-2021-solutions/
 
@@ -111,8 +116,9 @@ A) I'm not an expert on this but I'd say hourly rates for auditors are roughly:
 - Experienced: 100$-250$/h
 - Top Auditors: 250$-1000$/h
 
+<br />
 
-### Samczsun: Research Partner at Paradigm, focused on supporting portfolio companies and researching security and related topics, prev ToB.
+### Samczsun: Research Partner at Paradigm, focused on supporting portfolio companies and researching security and related topics, prev ToB
 If you're asking for what I think the three most common vulnerabilities are, I would say
 - missing input validation (not checking if a token is legit, etc)
 - improper access control (function should be private but is public, should be onlyOwner but isn't, etc)
@@ -160,6 +166,7 @@ A) Nothing in particular, I wouldn't attribute my knowledge to any one (or n < 3
 Q) Is there a better model than requiring auditors (where the cards are so heavily stacked against them)?  rugdoc seems to cover lots of contracts at a fast time
 A) imo auditors should be extremely vocal about the fact that audits aren't guarantees of security but simply third-party code reviews, and they should make sure that their clients don't treat it as such. Right now things are so bad that a handful of auditors are singlehandedly killing the reputation of the space as a whole because they keep producing reports which they themselves present as guarantees of security, only for the project to be hacked because they missed a critical bug or two.
 
+<br />
 
 ### Tincho: security researcher at OpenZeppelin
 Q) In terms of security; What are the 3 first things you look at in Smart Contracts?
