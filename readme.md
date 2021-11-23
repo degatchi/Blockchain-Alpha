@@ -27,8 +27,8 @@
 
 ## Q+A
 ### Alexander Schlindwein: Fei Protocol vulnerability finder
-Q) What general advice would you give to aspiring blockchain bug bounty hunters?
-A) A great way to get started learning about smart contract exploits is to practice by participating in wargames and CTFs. You can find some good ones in https://github.com/crytic/awesome-ethereum-security 's repository.
+Q) What general advice would you give to aspiring blockchain bug bounty hunters? 
+<br /> A) A great way to get started learning about smart contract exploits is to practice by participating in wargames and CTFs. You can find some good ones in https://github.com/crytic/awesome-ethereum-security 's repository.
 
 Also, do not get discouraged if you haven’t found a bug yet, even though you have spent a lot of time searching. Often you will be working with code that has been audited by world-class security experts and put through extensive testing. That does not mean that there are no bugs, though — an audit is no guarantee for security and the list of audited projects which have been exploited is long enough.
 
@@ -72,7 +72,7 @@ What are the 3 first things you look at in Smart Contracts?
 
 ### Leo Alt: Researcher and Formal Verification Lead at the Ethereum Foundation
 Q) Do you have any advice for people who would like to go into this area of using formal verification on blockchain protocols and smart contracts? E.g. what are the pre-requisites? And if one is interested, what are the companies that we can apply for?
-A) I think learning how to use the FV tools to their best, and a bit of how they work, will give you both practical experience in the topic + give you pointers to learn more about the theoretical aspects if you're interested. As far as companies go I can't really say specific names, but I guess companies that use FV for their audits.
+<br />A) I think learning how to use the FV tools to their best, and a bit of how they work, will give you both practical experience in the topic + give you pointers to learn more about the theoretical aspects if you're interested. As far as companies go I can't really say specific names, but I guess companies that use FV for their audits.
 
 As a very quick thought, accesses that public/external functions give, unsafe external calls and assembly.
 
@@ -82,19 +82,19 @@ Smart contract audits should not be used as stamps of approvals. Words like "Pas
 
 ### Christoph: Ranked #1 hacker on Code4rena
 Q) What CTFs/war games/materials do you recommend doing for someone aspiring to take your #1 spot on Code4rena?
-A) I started out doing Damn Vulnerable Defi https://cmichel.io/damn-vulnerable-de-fi-solutions/, Ethernaut https://cmichel.io/ethernaut-solutions/ and Capture The Ether https://cmichel.io/capture-the-ether-solutions/. The links here include my solutions if you get stuck but try to do it on your own first. Another great way that got me in contact with other auditors and all major auditing firms was Paradigm CTF https://cmichel.io/paradigm-ctf-2021-solutions/
+<br />A) I started out doing Damn Vulnerable Defi https://cmichel.io/damn-vulnerable-de-fi-solutions/, Ethernaut https://cmichel.io/ethernaut-solutions/ and Capture The Ether https://cmichel.io/capture-the-ether-solutions/. The links here include my solutions if you get stuck but try to do it on your own first. Another great way that got me in contact with other auditors and all major auditing firms was Paradigm CTF https://cmichel.io/paradigm-ctf-2021-solutions/
 
 Q) What tools do you use when auditing?
-A) I don't use any tools that directly perform vulnerability analysis. I only use the great "Solidity Visual Developer" VSCode extension that highlights storage variables and function parameters which makes it easier to have some context when reading a new codebase.
+<br />A) I don't use any tools that directly perform vulnerability analysis. I only use the great "Solidity Visual Developer" VSCode extension that highlights storage variables and function parameters which makes it easier to have some context when reading a new codebase.
 
 Q) How do you calculate the audit's cost?
-A) Scoping audits is always a tough task and imo you only get better at it with experience. But I'll give you a rule of thumb: Let's say you can audit 200 lines of code per hour (which is a standard assumption among some auditors afaik) - adjust that parameter down if the code is complex, math-heavy or the documentation is bad. You then take the lines of code and divide it by 200 LOC/h, then you get the hours required to audit the code for a single person. If you're an independent auditor you should also add 5h-10h for compiling the report and all the biz-dev work, plus answering questions. Then you multiply it by your hourly rate. More on hourly rates below.
+<br />A) Scoping audits is always a tough task and imo you only get better at it with experience. But I'll give you a rule of thumb: Let's say you can audit 200 lines of code per hour (which is a standard assumption among some auditors afaik) - adjust that parameter down if the code is complex, math-heavy or the documentation is bad. You then take the lines of code and divide it by 200 LOC/h, then you get the hours required to audit the code for a single person. If you're an independent auditor you should also add 5h-10h for compiling the report and all the biz-dev work, plus answering questions. Then you multiply it by your hourly rate. More on hourly rates below.
 
-How much time do you spend on a contract on average till you "stop" looking at it, i.e. when new C4 projects launch?
-How much do you use tools and how much is really looking at the code and manual work?
-How do you make sure that your possible exploit really is possible when most C4 code is not deployed yet?
-And: Do you have N/A too or do you report only 100% sure vulns?
-1. That's a good question. I could always spend more time on the code and it would increase the likelihood of me finding bugs. But at some point, there's the point of "diminishing returns", where it's not reasonable to spend any more time on the code. Alexander Schlindwein was asked the same question regarding bug bounties but I think it applies to audits as well:
+How much time do you spend on a contract on average till you "stop" looking at it, i.e. when new C4 projects launch? <br />
+How much do you use tools and how much is really looking at the code and manual work? <br />
+How do you make sure that your possible exploit really is possible when most C4 code is not deployed yet? <br />
+And: Do you have N/A too or do you report only 100% sure vulns? <br />
+=1. That's a good question. I could always spend more time on the code and it would increase the likelihood of me finding bugs. But at some point, there's the point of "diminishing returns", where it's not reasonable to spend any more time on the code. Alexander Schlindwein was asked the same question regarding bug bounties but I think it applies to audits as well:
 The approach which works best for me is to set myself the goal of fully understanding the system to the point where I could reimplement it from scratch without being allowed a look at the original codebase. Not from remembering the code, but from having understood what the application is supposed to do. If you have examined a project that far and have not found a bug, the chances of finding one by continuing is low. https://medium.com/immunefi/interview-with-legendary-bug-bounty-hunter-alexander-schlindwein-cced9c73c02a
 Realistically, I often stop before reaching that point due to time constraints and opportunity costs when I think my limited time is better spent elsewhere.
 2. 100% manual work for me
@@ -105,12 +105,12 @@ Q) Can you describe/breakdown your auditing process?
 2. You don't need cryptography knowledge to be an auditor but I see more and more math-heavy DeFi protocols, so being good at math is definitely a plus.
 3. My income streams are 1) Code4rena 2) audits of protocols that reach out to me 3) investments 4) onlyfans
 4. My auditing process is pretty straightforward. First I read the documentation. Then I read the code from top to bottom, I order the contracts in a way that makes sense: for example, I read the base class contract first before I read the derived class contract. I don't use any tools, but I heavily take notes and scribble all over the code. 😃 I'm using the "Solidity Visual Developer" extension which comes with the @audit, @audit-info, @audit-ok, @audit-issue markers which I all use to categorize my notes. After I read the entire codebase once I revisit my notes and resolve any loose ends or things I didn't understand earlier. Afterwards, I create my audit report out of these notes.
-
-Q) Any must-reads on auditing you recommend?
+ 
+Q) Any must-reads on auditing you recommend? <br />
 A) Subscribe to the "BlockThreat Newsletter" by https://twitter.com/_iphelix.
 It's a weekly newsletter consisting of all security incidents, post mortems, and other security-related topics that happened in the past week. @Rajeev | Secureum list is great and compact https://secureum.substack.com/p/smart-contract-security-101-secureum 
 
-Q) Salary for auditors based on experience/skin level?
+Q) Salary for auditors based on experience/skin level? <br />
 A) I'm not an expert on this but I'd say hourly rates for auditors are roughly:
 - Junior: 100$/h
 - Experienced: 100$-250$/h
@@ -128,16 +128,16 @@ However, just know that the key to success isn't to memorize a checklist of vuln
 
 My policy is that everything stays private by default unless I have some reason to make it public. I don't have a good reason to de-anonymize myself right now so I don't.
 
-Q) What activities were the most productive for you to gain a deep understanding of lower-level ethereum concepts?
+Q) What activities were the most productive for you to gain a deep understanding of lower-level ethereum concepts? <br />
 A) Always be curious and don't be afraid to dig deep into concepts. Have you ever wondered how a mapping is implemented, and why do we assume collisions are impossible? What's the difference between calling a regular function and a view function, and how does the EVM enforce that? There's plenty of questions that are waiting to be asked about Solidity and Ethereum that most people just take for granted, and the answers to those questions will require you to explore the EVM. There's no better way to learn about low-level concepts than this imo
 
-Q) How much code do you write on a weekly basis vs read?
+Q) How much code do you write on a weekly basis vs read? <br />
 A) I split about 50/50 right now because I'm working on some tooling, but sometimes I might go weeks without writing any code at all
 
-Q) How did you get to where you are now?
+Q) How did you get to where you are now? <br />
 A) I started with smart contract security by reading blogs about common vulnerabilities just to get myself up to speed, and then slowly worked my way down the stack as I felt more and more comfortable about what I knew. Jumping right into the EVM seems like a great way to burn yourself out if you're not prepared for it
 
-Q) What is your tooling like?
+Q) What is your tooling like? <br />
 A) My tooling is very simple.
 
 Browsing source code:
@@ -154,13 +154,13 @@ Finding random things on-chain
 - ethervm.io
 - seth
 
-Q) What qualities make a good auditor/security engineer?
+Q) What qualities make a good auditor/security engineer? <br />
 A) My default answer is being able to look at something and question how it really works, but actually now that I think about it, I want to run a few experiments to try and test that hypothesis. Maybe more to come 😄
 
-Q) How would you describe your auditing process?
+Q) How would you describe your auditing process? <br />
 A) If it's a small enough codebase, I skim and audit at the same time, getting a sense for how the code works while looking for common issues. If the codebase is too big, then I need to really focus on understanding the logic before I can move on to looking for bugs. The auditing process itself is really just approaching the code at a bunch of different angles and trying to tease out what's being assumed and how I might break it. Different angles help me narrow down the scope so I know which functions I care about and which ones I don't
 
-Q) Any recommended must-read resources on security/auditing?
+Q) Any recommended must-read resources on security/auditing? <br />
 A) Nothing in particular, I wouldn't attribute my knowledge to any one (or n < 3) blog post or the like. My number one recommendation is always to just go out there and do the thing, whether it's on live contracts (Immunefi) or CTFs (there's this really neat one called Paradigm CTF 😉)
 
 Q) Is there a better model than requiring auditors (where the cards are so heavily stacked against them)?  rugdoc seems to cover lots of contracts at a fast time
@@ -169,7 +169,7 @@ A) imo auditors should be extremely vocal about the fact that audits aren't guar
 <br />
 
 ### Tincho: security researcher at OpenZeppelin
-Q) In terms of security; What are the 3 first things you look at in Smart Contracts?
+Q) In terms of security; What are the 3 first things you look at in Smart Contracts? <br />
 A) That's an easy one. You go top to bottom. So first 3 things are pragma, imports and the contract's name 😛
 The reality is that my specific steps will change depending on what I'm looking at. So I first need to understand what is it that I'm looking at, at least from a conceptual level. So documentation, tests, whitepapers, etc. are handy. And I usually start there. The goal is to understand the architecture and the main roles. I'm a visual thinker, so at this point I draw a lot. I should also say that documentation can be deceiving, so I try to have a healthy distrust for it.
 
@@ -177,12 +177,12 @@ And then there's a handful of things that tend to be quite sensitive, and usual 
 
 Be ready to read lots of code. Thousands of lines. If you're coming from black box web app testing, you might not be so used to reading code for hours. And at least when it comes to smart contracts, that's a must.
 
-Q) What tools do you use to audit/review contracts?
+Q) What tools do you use to audit/review contracts? <br />
 A) Nothing fancy. At the beginning, whatever let's me draw diagrams. So Slither, Surya and those kind of tools allow me to see inheritance chains, call graphs, exposed functions, etc. That's helpful to see how complex the beast is, and which are the main entry points.
 I don't use the Solidity Auditor VS Code extension because I feel it clutters the UI too much, at least for my taste. So usually it's just me reading code, taking notes (either in code with comments or a txt file), drawing stuff, and just thinking. I also think people underestimate the power of pen and paper - I've found bugs just following the logic in pen and paper. And then I'm keen on using the existing test suite of the projects to try out attacks or debug the behavior of complex functions.
 For note taking, some fellow auditors use smarter note taking apps such as Obsidian, Roam. Also others use Kanban boards to track their thoughts and exploration paths. I've tried those workflows as well, they can be useful.
 
-Q) What advice do you have for someone coming in for an entry-level position, how do they position themselves to get noticed by security companies out there? What do they do to improve their skills.
+Q) What advice do you have for someone coming in for an entry-level position, how do they position themselves to get noticed by security companies out there? What do they do to improve their skills. <br />
 A) Good one. Ok so there are two separate questions, not necessarily one tied to the other. Long answer coming!
 To improve your skills, I can at least tell you what I did (and continue doing):
 - Play every smart contract CTF available out there (in increasing complexity, probably Capture The Ether, Ethernaut, Damn Vulnerable DeFi, Paradigm CTF), and hit your head against the walls until you solve the challenges. At the end it's not about the actual solution what matters, but the learning process you went through to reach that solution.
