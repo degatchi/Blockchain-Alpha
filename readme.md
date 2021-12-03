@@ -3,6 +3,18 @@ A collection of valuable info for the curious minds of blockchain development
 
 ---
 
+# Getting into blockchain development
+1. First, learn the fundamentals of Javascript (watch a video on yt and just experiment). This is vital to understand as Solidity, smart-contract testing, web3 frontend, bot creating and other languages will be using the core concepts and syntax of JS.
+2. Once you've got a solid understanding of JS's core concepts, jump into https://cryptozombies.io/ + https://solidity-by-example.org/. These will teach you the fundamentals of Solidity development, allowing you to write EVM compatible contracts and grasp a good idea of how contracts are written.
+3. Start watching tutorials on youtube (https://www.youtube.com/watch?v=Ztr2Jet2-YY - i need to make more tbh) and play around with smart contract creation in remix. Remix is an in-browser code editor that allows easy access to deployment, function calls + error recognition. 
+4. Make sure to get your github account, github desktop + vscode. This will be your main source of code storage + where your portfolio will grow.
+5. Start creating contracts in vscode w/ hardhat (truffle is outdated vs hardhat) and start doing CTFs (damn vulnerable defi, ethernaut, etc).
+6. Come up with an idea and start building! Maybe go for some basic ideas first, i.e., user deposits ether, ether is split between x amount of users. Don't forget to add ethers, solidity +/or web3.js tests!
+7. Read compound comptroller, aave flashloans, uniswap-v2, sushiswap masterchef + pancakeswap masterchef contracts as they are staples + common contracts that are used.
+8. Explore the space! Research and enjoy your time :D
+
+---
+
 # Founding/Start-up
 - A record of advice and things i've learned while cofounding, working for other protocols + developing protocols.
 ### Notes
