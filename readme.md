@@ -243,6 +243,11 @@ To improve your skills, I can at least tell you what I did (and continue doing):
 - Either as an independent security researcher, or as an employee of a security firm, but force yourself to start making a living out of this. You'll get real exposure to code, projects, vulnerabilities, incidents, and all sort of knowledge that you'll only get if you're every single day working on this.
   On how to get noticed, I'd say that usually having a personal blog in which you write about the stuff you learn, research you're doing, CTF challenges you solve, writeups of bounties you've earned, and similar, it's a great way to show your work and skills. Also if you're more of a coder, a public GitHub with your own projects or solid contributions to open-source libraries and tools (related to security) can also be useful. Participating as speaker in security-related conferences is another one. Or just sharing in Twitter cool stuff. I don't know, probably there are lots of other ways, and sometimes even depends on what each security firm is looking for.
 
+
+### 0xBuns: Co-Founder of @SoulSwap
+- Look for attack vectors and check if they can be exploited.
+- Most protocols are forks of primitive protocols (i.e., Synthetix, SushiSwap, Pancakeswap, Compound, Uniswap-v2), so understanding those really well will help with majority of audits.
+
 ---
 
 # Solidity
@@ -288,7 +293,7 @@ https://line25.com/articles/persuasive-design-101
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
 - https://ethernaut.openzeppelin.com/
-- https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimisations (MSTORE, MLOAD, SSTORE, SLOAD)
+- https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD)
 
 Security
 
