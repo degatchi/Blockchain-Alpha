@@ -277,6 +277,53 @@ When to use `memory`, `storage`, or `calldata`:
 
 - Having multiple functions with the same naming convention with different params, i.e., `deposit(uint amount)`, `deposit(uint amount, address to)`, act as seperate functions.
 
+
+## Bonding Curve (aka Curation Markets)
+Q) What is it?
+A) A Bonding Curve is a mathematical curve that defines a relationship between price and token supply. It allows for a fix and predetermined price discovery mechanism.  
+
+Q) What are some of the curves I can create?
+A) List:
+- Exponential Curve: The less tokens there are the less the price is. Potentially useful for any type of staking, fractioanlization or an uncapped market (no token supply limit).
+- Negative Exponential Curve: The shape of a negative exponential curve allows you to incentivize early investment without heavily disincentivizing late investment.
+- Linear: Used when you want a static price vs supply.
+- Sigmoid: Bonding curve shapes are used to incentivize the market (interested individuals/organizations). This means that you should match the behavior you want from investors to the type of curve that incentivizes that behavior. (looks like an S)
+
+Q) What is this used for?
+A) Brief: Bonding curve shapes are used to incentivize the market (interested individuals/organizations). This means that you should match the behavior you want from investors to the type of curve that incentivizes that behavior.
+
+Examples:
+- Price discovery
+- Speculation (fractionalizations (secondary tokens))
+- Fundraising
+- Tokenization
+
+
+    |                                 o
+    |                                 o
+    |                                o
+    |                               o
+    |                             o
+    |                          o
+    |                       o
+    |                   o
+    |               o
+    |           o
+    |      o 
+    | o 
+    |_______________________________________
+
+Developer notes
+-  Be warned, implementing complex math formulas in Solidity is gas expensive and becomes very complicated very quickly. If you want to implement a complex curve I would recommend looking at Vyper (Curve Finance uses Vyper).
+- Taxation: If you wanted to use a bonding curve as a mechanism for fundraising, you need to be able to withdraw collateral (what you pay for the tokens with) from the bonding curve. A buy tax means that you can take a percentage of the collateral for every buy and move it to a different contract/wallet, allowing you to raise money from your bonding curve without having to de-collateralize the distributed tokens. A sell tax, on the other hand, means that token holders pay a fee when they sell tokens rather than buy Lastly, one can tax both sell and buy interactions with the bonding curve contract.
+
+Resources:
+- https://www.youtube.com/watch?v=yQktB5CHIRk (Understanding Bonding Curves with Zap)
+- https://github.com/bluedotdao/bondzier (Customizable bezier bonding curves)
+- https://javascript.info/bezier-curve (Intro to bezier curves)
+- https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a (Intro to bonding curves)
+- https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f (Token Bonding Curve Design Parameters)
+
 ---
 
 # Persuasive Design
