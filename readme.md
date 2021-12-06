@@ -308,6 +308,7 @@ Resources:
 - https://javascript.info/bezier-curve (Intro to bezier curves)
 - https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a (Intro to bonding curves)
 - https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f (Token Bonding Curve Design Parameters)
+https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17 (How to make bonding curves for continuous token models)
 
 ---
 
