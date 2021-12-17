@@ -324,6 +324,8 @@ Resources:
 - Strong progression + sense of achievement: i.e, leaderboards, ranks, cosmetics, items, levels, currency
 - Establish target audience: cater to casual (play anywhere) + competitive play (grinding to be the best)
 
+- https://www.youtube.com/watch?v=whzomFgjT50 top-down movement in Unity
+
 ---
 
 # Persuasive Design
