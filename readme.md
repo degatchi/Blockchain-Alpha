@@ -322,6 +322,7 @@ Resources:
 ### How to build a game
 - Build something with replay value: pvp + pve
 - Strong progression + sense of achievement: i.e, leaderboards, ranks, cosmetics, items, levels, currency
+- Establish target audience: cater to casual (play anywhere) + competitive play (grinding to be the best)
 
 ---
 
