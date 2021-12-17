@@ -31,6 +31,7 @@ A collection of valuable info for the curious minds of blockchain development
 - Give real use-case-tests to people you interview to test what they are capable of.
 
 ### Protocol Development
+- THE BIGGEST KILLER OF PROTOCOL ARCHITECTS IS ALWAYS WORKING ON THE 'BABY' BUT NEVER 'GIVING BIRTH'. In order to actually progress, you must make and deploy different versions (i.e, 1, 2, 3, ...). 
 - Think of an idea from scratch or improve someone else's idea/product.
 - Innovate, ship, research, repeat. Do this as fast as possible. There is an abundance of capital in the cryptosphere. You need to take advantage of these opportunities! Release a V-0, then V-1, then V-2 - each having considerable improvements.
 
@@ -310,6 +311,17 @@ Resources:
 - https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f (Token Bonding Curve Design Parameters)
 - https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17 (How to make bonding curves for continuous token models)
 - https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a (In-depth article: how to create bonding curves)
+
+---
+
+# Game Design
+1) Learn Unity, especially for 2d games (uses scripting language: C#). This is how everything will interact and move.
+2) Learn your artwork creation tool. I.e., learn 2d art to get started bc it's budget friendly, not a ton of lighting, materials, etc so it's friendly over all platforms. Use photoshop for enviornemntal scenes -> import layers + files into Unity -> start animating w/ Spine2d (allows you to add bones + make skeletons to animate them).
+3) Learn your sound design tool of choice (i.e, audacity).
+
+### How to build a game
+- Build something with replay value: pvp + pve
+- Strong progression + sense of achievement: i.e, leaderboards, ranks, cosmetics, items, levels, currency
 
 ---
 
