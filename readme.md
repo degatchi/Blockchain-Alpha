@@ -23,6 +23,7 @@ A collection of valuable info for the curious minds of blockchain development
 - Community > Product. Make sure products are being shipped, etc. However, without a community, the product is non-existent. It's much harder to bring back community members then it is to get them.
 - Be transparent. If you need more time to ship, announce that. Investors do not want to be left in the dark. Not being transparent will deter investors.
 - UNDERPROMISE + OVERDELIVER. Overpromising + overdelivering doesn't big as much as much excitement as underpromising + overpromising. 
+- Think about what you're promising before you do it and make sure you follow through. Never back yourself into a corner.
 - Know what you're talking about to gain confidence of investors
 - Don't bite off more than you can chew (i.e, roadmap)
 - Instead of making a roadmap, have a dev board of what is underdevelopment with no deadline. Deadlines cause stress and if not delivered (very possible due to unexpected errors, irl stuff, etc) investors will lose faith.
