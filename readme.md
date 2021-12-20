@@ -21,8 +21,11 @@ A collection of valuable info for the curious minds of blockchain development
 - Build + ship quick. Have a working product w/ a basic UI and work from there.
 - Don't burn out. Take breaks + don't work 24/7 bc taking a step back will allow you to take 3 more steps forward and be able to do this more consistently.
 - Community > Product. Make sure products are being shipped, etc. However, without a community, the product is non-existent. It's much harder to bring back community members then it is to get them.
-- Deliver + be transparent. If you need more time to ship, announce that. Investors do not want to be left in the dark. Not being transparent will deter investors.
-- Underpromise + overdeliver
+- Be transparent. If you need more time to ship, announce that. Investors do not want to be left in the dark. Not being transparent will deter investors.
+- UNDERPROMISE + OVERDELIVER
+- Know what you're talking about to gain confidence of investors
+- Don't bite off more than you can chew (i.e, roadmap)
+- Instead of making a roadmap, have a dev board of what is underdevelopment with no deadline. Deadlines cause stress and if not delivered (very possible due to unexpected errors, irl stuff, etc) investors will lose faith.
 
 ### Expansion
 - Make a payroll system
