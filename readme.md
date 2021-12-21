@@ -46,6 +46,11 @@ A collection of valuable info for the curious minds of blockchain development
 - Increase accessibility: the easier the platform is to use, the more people will be onboarded.
 - Innovate + educate: without educating, the innovation wont reach it's full potential! Guide those new to the platform.
 
+### Networking
+- Don't be afraid to message anyone. You never know the opportunities that await until you approach others.
+- Join twitter spaces + chat! You'll learn so much and meet so many people that will make life better <3
+- Developing/being active in a community is what brings attention to yourself and your product, don't dismiss it!
+
 ### Marketing
 90% of marketing problems startups face are:
 1. Distribution (growing channels & exposure)
