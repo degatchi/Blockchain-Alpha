@@ -1,5 +1,5 @@
 # Blurb
-A collection of valuable info for the curious minds of blockchain development
+A collection of valuable info for the curious minds of blockchain development.
 
 ---
 
