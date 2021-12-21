@@ -41,6 +41,11 @@ A collection of valuable info for the curious minds of blockchain development
 - Think of an idea from scratch or improve someone else's idea/product.
 - Innovate, ship, research, repeat. Do this as fast as possible. There is an abundance of capital in the cryptosphere. You need to take advantage of these opportunities! Release a V-0, then V-1, then V-2 - each having considerable improvements.
 
+### UI/UX Development
+- Have a tutorial/popup toggle that when hovering over buttons it explains what’s happening and the cause and effects. Have a walkthrough button that when clicked explains how the product works and how to use it. This helps onboarding new users, especially for non-crypto natives. 
+- Increase accessibility: the easier the platform is to use, the more people will be onboarded.
+- Innovate + educate: without educating, the innovation wont reach it's full potential! Guide those new to the platform.
+
 ### Marketing
 90% of marketing problems startups face are:
 1. Distribution (growing channels & exposure)
