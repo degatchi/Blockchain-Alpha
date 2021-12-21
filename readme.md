@@ -343,6 +343,7 @@ Resources:
 ### Resources
 - https://www.youtube.com/watch?v=whzomFgjT50 : top-down movement in Unity
 - https://www.youtube.com/watch?v=nJbzBSVy1u0 : Attack Animations: Everything You Need To Know
+- https://www.youtube.com/watch?v=b8YUfee_pzc : Learn Unity Engine and C# by creating a real top down RPG
 
 ---
 
