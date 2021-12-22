@@ -364,6 +364,7 @@ https://line25.com/articles/persuasive-design-101
 # Life Tips
 - Have a big network but not a big inner circle, choose them wisely. Put people who want the same thing as you around you. The attributes of those who are most around you will rub off onto you.
 - Always think of opportunity cost. Try to minimise regrets.
+- The more you sweat in peace, the less you'll bleed in war.
 
 ---
 
