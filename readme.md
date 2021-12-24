@@ -59,6 +59,14 @@ A collection of valuable info for the curious minds of blockchain development
 
 ---
 
+# NFTs
+ 
+
+## Resources
+https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches
+
+---
+
 # MEV
 - Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
 - Priority Gas Auctions (PGAs): Bots competitively bidding up transaction fees in order to obtain priority ordering, i.e., early block position and execution, for their transactions.
