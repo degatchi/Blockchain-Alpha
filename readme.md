@@ -289,6 +289,11 @@ To improve your skills, I can at least tell you what I did (and continue doing):
 
 # Solidity
 
+## Yul
+https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/ - Yul+ Smart Contract Development
+
+## General
+
 Error Handling:
 
 - assert(bool condition): causes a Panic error and thus state change reversion if the condition is not met - to be used for internal errors.
