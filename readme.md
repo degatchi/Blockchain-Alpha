@@ -88,6 +88,9 @@ https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches
 ---
 
 # Auditing
+## Audit Process
+From @SpearBitDAO - @jakelynch <br />
+To start, we set up a private discord channel with you and we'll have someone from our audit team speak with you to figure out the scope and provide a quote. We'll also figure out a time and who will be staffed on the audit. Since we're just starting out, we're fairly selective about what we're auditing atm. Once we engage, we'll take a deposit and at that point you'll give the auditors access to the codebase. Then they'll do their job and notify you of any found vulnerabilities while advising you on how to fix any vulnerabilities. If a vulnerability requires an extensive fix, we reserve the right to ask for a separate engagement. Our rule of thumb for now is about 80% of the week spent on audit and 20% spent on helping fix vulnerabilities. Once finished, we provide a report. 
 
 ### Notes
 
