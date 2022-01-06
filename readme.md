@@ -95,6 +95,19 @@ https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches
 
 <br />
 
+### What are the most common exploits?
+From my experience, it's either:
+- access control mishaps
+- order of operations error, leading to flashloan or re-entrancy vulns
+- issues where two different parties can be the same, like self-transfers or self-liquidations, sometimes break accounting because they operate on cached values in memory instead of always reading the latest one from storage
+- batch functions that don't work correctly when passing in a batch array with duplicate values
+- trusting user input
+- or a combination of flashloans +  oracle manipulation/re-entrancy
+
+Flashloan vulns can become pretty advanced and require a security mindset which I think most devs don't actually have. From my experience most devs don't create threat models for flashloan/oracle manipulation vectors + thats when they get auditors to look into it. You can see on https://rekt.news/leaderboard/ most have been unaudited and get attacked by one of the listed points.
+
+<br />
+
 ## Q+A
 
 ### Alexander Schlindwein: Fei Protocol vulnerability finder
