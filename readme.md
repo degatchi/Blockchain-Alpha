@@ -5,7 +5,7 @@ A collection of valuable info for the curious minds of blockchain development
 
 # Crypto law (Not legal advice)
 - Say your token is worthless, then it is not classified as a security.
-- *refer to legal folder*
+- https://new-fundamentals.gitbook.io/3d-frankenpunks/terms-and-conditions/3d-frankenpunk-nfts
 
 ---
 
