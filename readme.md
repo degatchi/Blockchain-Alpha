@@ -3,6 +3,12 @@ A collection of valuable info for the curious minds of blockchain development
 
 ---
 
+# Crypto law (Not legal advice)
+- Say your token is worthless, then it is not classified as a security.
+- *refer to legal folder*
+
+---
+
 # Getting into blockchain development
 1. First, learn the fundamentals of Javascript (watch a video on yt and just experiment). This is vital to understand as Solidity, smart-contract testing, web3 frontend, bot creating and other languages will be using the core concepts and syntax of JS.
 2. Once you've got a solid understanding of JS's core concepts, jump into https://cryptozombies.io/ + https://solidity-by-example.org/. These will teach you the fundamentals of Solidity development, allowing you to write EVM compatible contracts and grasp a good idea of how contracts are written.
