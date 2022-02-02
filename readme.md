@@ -307,6 +307,16 @@ To improve your skills, I can at least tell you what I did (and continue doing):
 ## Yul
 https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/ - Yul+ Smart Contract Development
 
+## Gas Optimisation
+* `require() -> revert()` 
+custom errors lower contract size
+
+* `unchecked {}`
+save gas w/o default safeMath
+
+* "black magic fuckery that is `ClonesWithCallData.sol`"
+minimal proxy w/ immutables h/t @boredGenius
+ 
 ## General
 
 Error Handling:
