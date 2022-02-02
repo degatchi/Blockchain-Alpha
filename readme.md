@@ -73,13 +73,6 @@ https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches
 
 ---
 
-# MEV
-- Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
-- Priority Gas Auctions (PGAs): Bots competitively bidding up transaction fees in order to obtain priority ordering, i.e., early block position and execution, for their transactions.
-- Pure revenue opportunities: A specific sub-category of DEX arbitrage representative of broader activity, these are blockchain transactions that issue multiple trades atomically through a smart contract and profit unconditionally in every traded asset.
-- Miner-extractable value (MEV): We introduce the notion of MEV, value that is extractable by miners directly from smart contracts as cryptocurrency profits. One particular source of MEV is _ordering optimization (OO)_ fees, which result from a miner’s control of the ordering of transactions in a particular epoch.
-- Time-bandit attacks: We show that high-MEV regimes in general lead to a new attack in which miners rewrite blockchain history to steal funds allocated by smart contracts in the past.
-
 ## Alpha
 
 - Use Golang for high speed and optimization - GETH is written in Golang.
@@ -362,23 +355,6 @@ Resources:
 - https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f (Token Bonding Curve Design Parameters)
 - https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17 (How to make bonding curves for continuous token models)
 - https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a (In-depth article: how to create bonding curves)
-
----
-
-# Game Design
-1) Learn Unity, especially for 2d games (uses scripting language: C#). This is how everything will interact and move.
-2) Learn your artwork creation tool. I.e., learn 2d art to get started bc it's budget friendly, not a ton of lighting, materials, etc so it's friendly over all platforms. Use photoshop for enviornemntal scenes -> import layers + files into Unity -> start animating w/ Spine2d (allows you to add bones + make skeletons to animate them).
-3) Learn your sound design tool of choice (i.e, audacity).
-
-### How to build a game
-- Build something with replay value: pvp + pve
-- Strong progression + sense of achievement: i.e, leaderboards, ranks, cosmetics, items, levels, currency
-- Establish target audience: cater to casual (play anywhere) + competitive play (grinding to be the best)
-
-### Resources
-- https://www.youtube.com/watch?v=whzomFgjT50 : top-down movement in Unity
-- https://www.youtube.com/watch?v=nJbzBSVy1u0 : Attack Animations: Everything You Need To Know
-- https://www.youtube.com/watch?v=b8YUfee_pzc : Learn Unity Engine and C# by creating a real top down RPG
 
 ---
 
