@@ -54,7 +54,11 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 ---
 
 ## GETH
-Why is GETH important? Well, in order to become competitive you need to know what everyone is doing and when someone interacts with a smart-contract state mutable function it doesn't emit an event if there is no event called in the function. So, the way someone could monitor whether a function is being called by searching the mempool (pool of unconfirmed transactions) for pending transactions with a specific hash and then doing something with that information, e.g, copying the tx's params and frontrunning them w/ higher gas.
+***What is GETH? <br />***
+GETH **IS** Ethereum. it's the software that miners run. you can also run it without mining and just use it to access data, mempool, etc, via a litenode (maybe named something different, many chains call it a "RPC node" or "API node"). Although you can submit transactions to it, your node just isn't the one that confirms them to the blockchain it will pass them off to the network until a miner mines it. For example, FlashBots, a service that relays your bundles (sorts them via miner fee and no-errors) to the miners, is just a modified geth node that had 300 lines of code added. 
+
+***Why is GETH important and why should you learn it? <br />***
+Well, in order to become competitive you need to know what everyone is doing and when someone interacts with a smart-contract state mutable function it doesn't emit an event if there is no event called in the function. So, the way someone could monitor whether a function is being called by searching the mempool (pool of unconfirmed transactions) for pending transactions with a specific hash and then doing something with that information, e.g, copying the tx's params and frontrunning them w/ higher gas. TD:LR; you need it to setup custom subscription events to track conditional events that can help with your bot monitoring system.
 
 ### Articles
 - (Tips for understanding GETH)[https://twitter.com/0xGreg_/status/1408773433371107330]
