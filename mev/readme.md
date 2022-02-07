@@ -1,11 +1,15 @@
 # MEV
+
+---
+
+## Glosssary
 - Frontrun: Adversaries observing txs then paying high tx fees and optimizing network latency to anticipate and exploit - via placing their own orders before to ensure they are mined first - ordinary users' trades.
 - Priority Gas Auctions (PGAs): Bots competitively bidding up transaction fees in order to obtain priority ordering, i.e., early block position and execution, for their transactions.
 - Pure revenue opportunities: A specific sub-category of DEX arbitrage representative of broader activity, these are blockchain transactions that issue multiple trades atomically through a smart contract and profit unconditionally in every traded asset.
 - Miner-extractable value (MEV): We introduce the notion of MEV, value that is extractable by miners directly from smart contracts as cryptocurrency profits. One particular source of MEV is _ordering optimization (OO)_ fees, which result from a miner’s control of the ordering of transactions in a particular epoch.
 - Time-bandit attacks: We show that high-MEV regimes in general lead to a new attack in which miners rewrite blockchain history to steal funds allocated by smart contracts in the past.
 
-## Resources
+---
 
 ## Lessons Learned
 - An extremely high failure rate is common (around 90%+). You need to account for that in your profit targets. E.g., if it costs 10c for fail, and 50c for success, and you run a 90% fail rate, then you should be able to determine what your min profit per trade should be using those - or change your strategy entirely. Flashloan fee will instantly kill most trades, because someone looking at it who doesn't need to flashloan will probably be able to take it for a profit while you come out with a loss, so they automatically have more opportunities to look at. For ideas, look at those who are beating you. So, you found an opportunity and lost it - who beat you, and what did they do - and better yet, what else are they looking at? (look at the flashbots block explorer).
@@ -27,3 +31,22 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - It's good to write a lot of fail-safes b/c if you don't, it will fail. The more fail-safes, the better your script will be.
 - UniswapV2 `path[]`: Any swap needs to have a starting and end path. While in Uniswap v2 you can have direct token to token pairs, it is not always guaranteed that such a pair actually exists. But you may still be able to trade them as long as you can find a path, e.g., Token1 → Token2 → WETH → Token3. In that case you can still trade Token1 for Token3, it will only cost a little bit more than a direct swap.
 - Generate bytecode data payloads + target methods of function call w/ certain params. This saves a ton on storage reads + allows for contract upgrades to add new dex addresses. (Done w/ `address.call(payload)`)
+
+---
+
+## Links
+- (Monitor + snipe liquidity pairs)[https://cryptomarketpool.com/how-to-create-a-snipe-bot-to-monitor-liquidity-pairs-in-python/]
+- (Salmonella)[https://github.com/Defi-Cartel/salmonella]
+- (Coinbase Salmonella)[https://twitter.com/bertcmiller/status/1381296074086830091]
+- (Cross-chain Arb Monitor)[https://github.com/makoto/xdai-arb-graph]
+- (MevAlphaLeak's ApeBank)[https://etherscan.io/address/0x00000000454a11ca3a574738c0aab442b62d5d45#code]
+- (Finding & Capturing MEV 101)[https://www.youtube.com/watch?v=70WtsHtFd8Y]
+- (Research articles)[https://github.com/flashbots/mev-research/blob/main/resources.md]
+- (Graphs algorithms and currency arbitrage)[https://reasonabledeviations.com/2019/03/02/currency-arbitrage-graphs/]
+- (Episode 216: A Dip into the Mempool & MEV with Project Blanc)[https://www.youtube.com/watch?v=gi6MU6Xcmok]
+- (Supercycled's cake_sniper twitter thread)[https://twitter.com/_supercycled/status/1414538498477072390]
+- (Pancakeswap Bot)[https://github.com/Nafidinara/bot-pancakeswap]
+- (Liquidity deployment in strategy)[https://twitter.com/mevintern/status/1409510748867399684]
+- (Tips for understanding GETH)[https://twitter.com/0xGreg_/status/1408773433371107330]
+- (An analysis of Uniswap markets)[https://web.stanford.edu/~guillean/papers/uniswap_analysis.pdf]
+
