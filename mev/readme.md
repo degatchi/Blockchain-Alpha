@@ -32,9 +32,8 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - UniswapV2 `path[]`: Any swap needs to have a starting and end path. While in Uniswap v2 you can have direct token to token pairs, it is not always guaranteed that such a pair actually exists. But you may still be able to trade them as long as you can find a path, e.g., Token1 → Token2 → WETH → Token3. In that case you can still trade Token1 for Token3, it will only cost a little bit more than a direct swap.
 - Generate bytecode data payloads + target methods of function call w/ certain params. This saves a ton on storage reads + allows for contract upgrades to add new dex addresses. (Done w/ `address.call(payload)`)
 
----
-
 ## Links
+### Articles
 - (Monitor + snipe liquidity pairs)[https://cryptomarketpool.com/how-to-create-a-snipe-bot-to-monitor-liquidity-pairs-in-python/]
 - (Salmonella)[https://github.com/Defi-Cartel/salmonella]
 - (Coinbase Salmonella)[https://twitter.com/bertcmiller/status/1381296074086830091]
@@ -44,9 +43,23 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - (Research articles)[https://github.com/flashbots/mev-research/blob/main/resources.md]
 - (Graphs algorithms and currency arbitrage)[https://reasonabledeviations.com/2019/03/02/currency-arbitrage-graphs/]
 - (Episode 216: A Dip into the Mempool & MEV with Project Blanc)[https://www.youtube.com/watch?v=gi6MU6Xcmok]
-- (Supercycled's cake_sniper twitter thread)[https://twitter.com/_supercycled/status/1414538498477072390]
 - (Pancakeswap Bot)[https://github.com/Nafidinara/bot-pancakeswap]
 - (Liquidity deployment in strategy)[https://twitter.com/mevintern/status/1409510748867399684]
-- (Tips for understanding GETH)[https://twitter.com/0xGreg_/status/1408773433371107330]
 - (An analysis of Uniswap markets)[https://web.stanford.edu/~guillean/papers/uniswap_analysis.pdf]
 
+### Bot examples
+- (liquidiation-bot-fall-2020)[https://github.com/fxfactorial/liquidation-bot-fall-2020]
+- (Supercycled's cake_sniper twitter thread)[https://twitter.com/_supercycled/status/1414538498477072390]
+
+---
+
+## GETH
+Why is GETH important? Well, in order to become competitive you need to know what everyone is doing and when someone interacts with a smart-contract state mutable function it doesn't emit an event if there is no event called in the function. So, the way someone could monitor whether a function is being called by searching the mempool (pool of unconfirmed transactions) for pending transactions with a specific hash and then doing something with that information, e.g, copying the tx's params and frontrunning them w/ higher gas.
+
+### Articles
+- (Tips for understanding GETH)[https://twitter.com/0xGreg_/status/1408773433371107330]
+- (Pending transactions, ABI decoding uniswap in golang)[https://hyegar.com/posts/pending-tx-and-abi/]
+- (Adding a new event to geth)[https://hyegar.com/posts/new-event-to-geth/]
+- (Signed flashbots requests in golang)[https://hyegar.com/posts/flashbots-rpc/]
+
+---
