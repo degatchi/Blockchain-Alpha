@@ -47,6 +47,8 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - (Liquidity deployment in strategy)[https://twitter.com/mevintern/status/1409510748867399684]
 - (An analysis of Uniswap markets)[https://web.stanford.edu/~guillean/papers/uniswap_analysis.pdf]
 - (On Efficient Eth Addresses)[https://medium.com/coinmonks/on-efficient-ethereum-addresses-3fef0596e263]
+- (ERC20 transfer gas saving)[https://twitter.com/transmissions11/status/1474939603689738242?s=28]
+- (Mock mempool viewer)[https://tinyurl.com/yjaf45lo]
 
 ### Bot examples
 - (liquidiation-bot-fall-2020)[https://github.com/fxfactorial/liquidation-bot-fall-2020]
@@ -60,6 +62,9 @@ GETH **IS** Ethereum. it's the software that miners run. you can also run it wit
 
 ***Why is GETH important and why should you learn it? <br />***
 Well, in order to become competitive you need to know what everyone is doing and when someone interacts with a smart-contract state mutable function it doesn't emit an event if there is no event called in the function. So, the way someone could monitor whether a function is being called by searching the mempool (pool of unconfirmed transactions) for pending transactions with a specific hash and then doing something with that information, e.g, copying the tx's params and frontrunning them w/ higher gas. TD:LR; you need it to setup custom subscription events to track conditional events that can help with your bot monitoring system.
+
+***Example***
+Filter for tx hashes that contain specific interface bytecode + react accordingly. 
 
 ### Articles
 - (Tips for understanding GETH)[https://twitter.com/0xGreg_/status/1408773433371107330]
