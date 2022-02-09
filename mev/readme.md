@@ -46,6 +46,7 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - (Pancakeswap Bot)[https://github.com/Nafidinara/bot-pancakeswap]
 - (Liquidity deployment in strategy)[https://twitter.com/mevintern/status/1409510748867399684]
 - (An analysis of Uniswap markets)[https://web.stanford.edu/~guillean/papers/uniswap_analysis.pdf]
+- (On Efficient Eth Addresses)[https://medium.com/coinmonks/on-efficient-ethereum-addresses-3fef0596e263]
 
 ### Bot examples
 - (liquidiation-bot-fall-2020)[https://github.com/fxfactorial/liquidation-bot-fall-2020]
