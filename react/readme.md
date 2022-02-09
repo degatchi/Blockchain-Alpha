@@ -6,6 +6,7 @@
 
 ```
     const buyoutContract = new ethers.Contract(contractAddress, BuyoutFixedABI, provider);
+    // "[EVENT_NAME]", ([PARAM], [PARAM], [EVENT_DATA])
     buyoutContract.on("Buyout", (buyer, amount, bonusAmount, cost, event) => {
         console.log("amount", amount);
     });

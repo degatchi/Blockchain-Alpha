@@ -391,39 +391,29 @@ https://line25.com/articles/persuasive-design-101
 
 # Resources
 
+### General
 - https://arxiv.org/pdf/1904.05234.pdf
-- https://tinyurl.com/yjaf45lo (mock mempool viewer)
-- https://consensys.github.io/smart-contract-best-practices/known_attacks/
-- https://www.certik.org/ (read existing audit reports)
 - https://github.com/ethereumbook/ether...
 - https://cryptozombies.io/
 - https://solidity-by-example.org/
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
-- https://ethernaut.openzeppelin.com/
-- https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2 good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD)
-- https://www.youtube.com/watch?v=S52ZsZ7rNOo Sway Lang: Rust-based smart contract language
-- https://twitter.com/immunefi/status/1474445026172174340?s=28 Blocksec-ctfs
-- https://twitter.com/transmissions11/status/1474939603689738242?s=28 ERC20 transfer gas saving
-- https://twitter.com/controlcthenv/status/1475260262131417098?s=28 Solidity + Yul tips + tricks
-- https://twitter.com/immunefi/status/1475780995563638784?s=28 Web3 hacking: start here guide
-- https://twitter.com/0xasm0d3us/status/1475813604100243460?s=28 Reverse engineering for everyone
-- https://twitter.com/timurguvenkaya/status/1475843655567089676?s=28 How to start Web3 hacking on Rust-based chains
-- https://github.com/Mikerah/solidity-bugs-and-vulns-in-yul Solidity bugs and vulns in Yul
-- https://t.co/Vih7tJ8jEQ?ssr=true Assembly code (tricks)
-
-
-
-Security
-
+- (Sway Lang: Rust-based smart contract language)[https://www.youtube.com/watch?v=S52ZsZ7rNOo]
+- (Solidity + Yul tips + tricks)[https://twitter.com/controlcthenv/status/1475260262131417098?s=28]
+- (Assembly code (tricks))[https://t.co/Vih7tJ8jEQ?ssr=true]
+- (Data Representation in Solidity)[https://ethdebug.github.io/solidity-data-representation/]
+- (Good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD))[https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2]
+- (Daniele Sesta on popscile finance and MIM, SPELL)[https://www.youtube.com/watch?v=Pw6ch5c89Iw]
+### Security
+- (Blocksec-ctfs)[https://twitter.com/immunefi/status/1474445026172174340?s=28]
+- (Web3 hacking: start here guide)[https://twitter.com/immunefi/status/1475780995563638784?s=28]
+- (Reverse engineering for everyone)[https://twitter.com/0xasm0d3us/status/1475813604100243460?s=28]
+- (How to start Web3 hacking on Rust-based chains)[https://twitter.com/timurguvenkaya/status/1475843655567089676?s=28]
+- (Solidity bugs and vulns in Yul)[https://github.com/Mikerah/solidity-bugs-and-vulns-in-yul]
 - https://secureum.substack.com/p/ethereum-101
 - https://github.com/leonardoalt/ethereum_formal_verification_overview
 - https://github.com/crytic/awesome-ethereum-security
-
-Podcasts
-
-- https://www.youtube.com/watch?v=Pw6ch5c89Iw (Daniele Sesta on popscile finance and MIM, SPELL)
-
-Articles
-
 - https://samczsun.com/author/samczsun/
+- https://consensys.github.io/smart-contract-best-practices/known_attacks/
+- https://ethernaut.openzeppelin.com/
+- https://www.certik.org/
