@@ -3,6 +3,8 @@ A collection of valuable info for the curious minds of blockchain development
 
 ---
 
+# 
+
 # Crypto law (Not legal advice)
 - Say your token is worthless, then it is not classified as a security.
 - https://new-fundamentals.gitbook.io/3d-frankenpunks/terms-and-conditions/3d-frankenpunk-nfts
@@ -377,8 +379,12 @@ https://line25.com/articles/persuasive-design-101
 ---
 
 # Investment
-
 - https://www.youtube.com/watch?v=hSHE4Exx1O4 crypto lawyer for moving to portugal + golden visa plan https://map-advogados.com/en/
+- [Golden Visa Portugal: The Cheapest & Best Investment Option?](https://www.youtube.com/watch?v=3KRIkJhTCBg)
+- [Why I Chose St. Lucia for Citizenship by Investment](https://www.youtube.com/watch?v=ph5JGyGu9Sc) 
+- [Nomad Capitalist](https://nomadcapitalist.com/global-citizen/second-passport/st-lucia-citizenship-by-investment/)
+- [Crypto Friendly Banks (Portugal vs UAE vs Other Countries)](https://www.youtube.com/watch?v=qSuZuXOK6dA)
+- [Offshore Citizen](https://offshorecitizen.net/citizenship-by-investment/)
 
 ---
 
