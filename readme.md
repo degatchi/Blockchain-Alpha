@@ -387,12 +387,9 @@ https://line25.com/articles/persuasive-design-101
 # Resources
 
 ### General
-- https://arxiv.org/pdf/1904.05234.pdf
-- https://github.com/ethereumbook/ether...
-- https://cryptozombies.io/
-- https://solidity-by-example.org/
-- https://docs.soliditylang.org/
-- https://ethereum.org/en/learn/
+- [CryotoZombies](https://cryptozombies.io/)
+- [Solidity-By-Example](https://solidity-by-example.org/)
+- [Solidity Docs](https://docs.soliditylang.org/)
 - [Sway Lang: Rust-based smart contract language](https://www.youtube.com/watch?v=S52ZsZ7rNOo)
 - [Solidity + Yul tips + tricks](https://twitter.com/controlcthenv/status/1475260262131417098?s=28)
 - [Yul+ Smart Contract Development](https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/)
@@ -405,20 +402,25 @@ https://line25.com/articles/persuasive-design-101
 - [Math in Solidity (Part 3: Percents and Proportions)](https://medium.com/coinmonks/math-in-solidity-part-3-percents-and-proportions-4db014e080b1)
 - [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Constant Sum AMM | Solidity by Example | 0.8.10](https://solidity-by-example.org/defi/constant-sum-amm/)
-- [Solidity Tutorial : all about Assembly]()
+- [Solidity Tutorial : all about Assembly](https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c)
+- [Tight Variable Packing](https://fravoll.github.io/solidity-patterns/tight_variable_packing.html)
+- [Efficient Bit Packing](https://ethereum.stackexchange.com/questions/77099/efficient-bit-packing/77102#77102)
 - [Into to nft collection launches](https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches)
+- [Diving Into The Ethereum VM Part 2 — How I Learned To Start Worrying And Count The Storage Cost](https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-2-storage-layout-bc5349cb11b7)
+- [Ultimate DeFi and Blockchain Research Base](https://github.com/OffcierCia/ultimate-defi-research-base#security--safety)
 
 
 ### Security
+- [Ethereum 101](https://secureum.substack.com/p/ethereum-101)
+- [These are some tips & tricks that'll make auditors love you from day one 🧵](https://threadreaderapp.com/thread/1400170232904400897.html)
+- [Ethernaut (CTF)](https://ethernaut.openzeppelin.com/)
 - [Blocksec-ctfs](https://twitter.com/immunefi/status/1474445026172174340?s=28)
 - [Web3 hacking: start here guide](https://twitter.com/immunefi/status/1475780995563638784?s=28)
 - [Reverse engineering for everyone](https://twitter.com/0xasm0d3us/status/1475813604100243460?s=28)
 - [How to start Web3 hacking on Rust-based chains](https://twitter.com/timurguvenkaya/status/1475843655567089676?s=28)
 - [Solidity bugs and vulns in Yul](https://github.com/Mikerah/solidity-bugs-and-vulns-in-yul)
-- https://secureum.substack.com/p/ethereum-101
+- [Consensys Smart contract best practices](https://consensys.github.io/smart-contract-best-practices/known_attacks/)
 - https://github.com/leonardoalt/ethereum_formal_verification_overview
 - https://github.com/crytic/awesome-ethereum-security
 - https://samczsun.com/author/samczsun/
-- https://consensys.github.io/smart-contract-best-practices/known_attacks/
-- https://ethernaut.openzeppelin.com/
 - https://www.certik.org/
