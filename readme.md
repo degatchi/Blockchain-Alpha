@@ -13,7 +13,7 @@ A collection of valuable info for the curious minds of blockchain development
 
 # Getting into blockchain development
 1. First, learn the fundamentals of Javascript (watch a video on yt and just experiment). This is vital to understand as Solidity, smart-contract testing, web3 frontend, bot creating and other languages will be using the core concepts and syntax of JS.
-2. Once you've got a solid understanding of JS's core concepts, jump into https://cryptozombies.io/ + https://solidity-by-example.org/. These will teach you the fundamentals of Solidity development, allowing you to write EVM compatible contracts and grasp a good idea of how contracts are written.
+2. Once you've got a solid understanding of JS's core concepts, jump into [CryptoZombies](https://cryptozombies.io/) + [Solidity-By-Example](https://solidity-by-example.org/). These will teach you the fundamentals of Solidity development, allowing you to write EVM compatible contracts and grasp a good idea of how contracts are written.
 3. Start watching tutorials on youtube (https://www.youtube.com/watch?v=Ztr2Jet2-YY - i need to make more tbh) and play around with smart contract creation in remix. Remix is an in-browser code editor that allows easy access to deployment, function calls + error recognition. 
 4. Make sure to get your github account, github desktop + vscode. This will be your main source of code storage + where your portfolio will grow.
 5. Start creating contracts in vscode w/ forge (heres a template i made: https://github.com/DeGatchi/forge-template) and start doing CTFs (damn vulnerable defi, ethernaut, etc).
@@ -64,14 +64,6 @@ A collection of valuable info for the curious minds of blockchain development
 1. Distribution (growing channels & exposure)
 2. Driving conversions (sales, clicks, subscribes)
 3. Developing a brand (consistent & reputable)
-
----
-
-# NFTs
- 
-
-## Resources
-https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches
 
 ---
 
@@ -306,9 +298,6 @@ To improve your skills, I can at least tell you what I did (and continue doing):
 
 # Solidity
 
-## Yul
-https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/ - Yul+ Smart Contract Development
-
 ## Gas Optimisation
 * `require() -> revert()` 
 custom errors lower contract size
@@ -360,13 +349,13 @@ Developer notes
 - Taxation: If you wanted to use a bonding curve as a mechanism for fundraising, you need to be able to withdraw collateral (what you pay for the tokens with) from the bonding curve. A buy tax means that you can take a percentage of the collateral for every buy and move it to a different contract/wallet, allowing you to raise money from your bonding curve without having to de-collateralize the distributed tokens. A sell tax, on the other hand, means that token holders pay a fee when they sell tokens rather than buy Lastly, one can tax both sell and buy interactions with the bonding curve contract.
 
 Resources:
-- https://www.youtube.com/watch?v=yQktB5CHIRk (Understanding Bonding Curves with Zap)
-- https://github.com/bluedotdao/bondzier (Customizable bezier bonding curves)
-- https://javascript.info/bezier-curve (Intro to bezier curves)
-- https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a (Intro to bonding curves)
-- https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f (Token Bonding Curve Design Parameters)
-- https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17 (How to make bonding curves for continuous token models)
-- https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a (In-depth article: how to create bonding curves)
+- [Understanding Bonding Curves with Zap](https://www.youtube.com/watch?v=yQktB5CHIRk)
+- [Customizable bezier bonding curves](https://github.com/bluedotdao/bondzier)
+- [Intro to bezier curves](https://javascript.info/bezier-curve)
+- [Intro to bonding curves](https://medium.com/linum-labs/intro-to-bonding-curves-and-shapes-bf326bc4e11a)
+- [Token Bonding Curve Design Parameters](https://medium.com/molecule-blog/token-bonding-curve-design-parameters-95d365cbec4f)
+- [How to make bonding curves for continuous token models](https://blog.relevant.community/how-to-make-bonding-curves-for-continuous-token-models-3784653f8b17)
+- [In-depth article: how to create bonding curves](https://blog.relevant.community/bonding-curves-in-depth-intuition-parametrization-d3905a681e0a)
 
 ---
 
@@ -404,18 +393,28 @@ https://line25.com/articles/persuasive-design-101
 - https://solidity-by-example.org/
 - https://docs.soliditylang.org/
 - https://ethereum.org/en/learn/
-- (Sway Lang: Rust-based smart contract language)[https://www.youtube.com/watch?v=S52ZsZ7rNOo]
-- (Solidity + Yul tips + tricks)[https://twitter.com/controlcthenv/status/1475260262131417098?s=28]
-- (Assembly code (tricks))[https://t.co/Vih7tJ8jEQ?ssr=true]
-- (Data Representation in Solidity)[https://ethdebug.github.io/solidity-data-representation/]
-- (Good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD))[https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2]
-- (Daniele Sesta on popscile finance and MIM, SPELL)[https://www.youtube.com/watch?v=Pw6ch5c89Iw]
+- [Sway Lang: Rust-based smart contract language](https://www.youtube.com/watch?v=S52ZsZ7rNOo)
+- [Solidity + Yul tips + tricks](https://twitter.com/controlcthenv/status/1475260262131417098?s=28)
+- [Yul+ Smart Contract Development](https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/)
+- [Assembly code (tricks)](https://t.co/Vih7tJ8jEQ?ssr=true)
+- [Data Representation in Solidity](https://ethdebug.github.io/solidity-data-representation/)
+- [Good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD](https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2)
+- [Daniele Sesta on popscile finance and MIM, SPELL](https://www.youtube.com/watch?v=Pw6ch5c89Iw)
+- [Uniswap-V2 Contract Walk-through](https://ethereum.org/en/developers/tutorials/uniswap-v2-annotated-code/)
+- [An Example How Uniswap Calculate The Price Of The Tokens and What Happens When Swap Is Made](https://www.publish0x.com/dalz-blog/an-example-how-uniswap-calculate-the-price-of-the-tokens-and-xvrnxjd)
+- [Math in Solidity (Part 3: Percents and Proportions)](https://medium.com/coinmonks/math-in-solidity-part-3-percents-and-proportions-4db014e080b1)
+- [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Constant Sum AMM | Solidity by Example | 0.8.10](https://solidity-by-example.org/defi/constant-sum-amm/)
+- [Solidity Tutorial : all about Assembly]()
+- [Into to nft collection launches](https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches)
+
+
 ### Security
-- (Blocksec-ctfs)[https://twitter.com/immunefi/status/1474445026172174340?s=28]
-- (Web3 hacking: start here guide)[https://twitter.com/immunefi/status/1475780995563638784?s=28]
-- (Reverse engineering for everyone)[https://twitter.com/0xasm0d3us/status/1475813604100243460?s=28]
-- (How to start Web3 hacking on Rust-based chains)[https://twitter.com/timurguvenkaya/status/1475843655567089676?s=28]
-- (Solidity bugs and vulns in Yul)[https://github.com/Mikerah/solidity-bugs-and-vulns-in-yul]
+- [Blocksec-ctfs](https://twitter.com/immunefi/status/1474445026172174340?s=28)
+- [Web3 hacking: start here guide](https://twitter.com/immunefi/status/1475780995563638784?s=28)
+- [Reverse engineering for everyone](https://twitter.com/0xasm0d3us/status/1475813604100243460?s=28)
+- [How to start Web3 hacking on Rust-based chains](https://twitter.com/timurguvenkaya/status/1475843655567089676?s=28)
+- [Solidity bugs and vulns in Yul](https://github.com/Mikerah/solidity-bugs-and-vulns-in-yul)
 - https://secureum.substack.com/p/ethereum-101
 - https://github.com/leonardoalt/ethereum_formal_verification_overview
 - https://github.com/crytic/awesome-ethereum-security
