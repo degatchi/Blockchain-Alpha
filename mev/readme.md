@@ -43,16 +43,21 @@ I kinda agree that I was monitoring a bot, the contract level is not gas efficie
 - (Research articles)[https://github.com/flashbots/mev-research/blob/main/resources.md]
 - (Graphs algorithms and currency arbitrage)[https://reasonabledeviations.com/2019/03/02/currency-arbitrage-graphs/]
 - (Episode 216: A Dip into the Mempool & MEV with Project Blanc)[https://www.youtube.com/watch?v=gi6MU6Xcmok]
-- (Pancakeswap Bot)[https://github.com/Nafidinara/bot-pancakeswap]
 - (Liquidity deployment in strategy)[https://twitter.com/mevintern/status/1409510748867399684]
 - (An analysis of Uniswap markets)[https://web.stanford.edu/~guillean/papers/uniswap_analysis.pdf]
 - (On Efficient Eth Addresses)[https://medium.com/coinmonks/on-efficient-ethereum-addresses-3fef0596e263]
-- (ERC20 transfer gas saving)[https://twitter.com/transmissions11/status/1474939603689738242?s=28]
-- (Mock mempool viewer)[https://tinyurl.com/yjaf45lo]
+- [ERC20 transfer gas saving](https://twitter.com/transmissions11/status/1474939603689738242?s=28)
+- [Mock mempool viewer](https://tinyurl.com/yjaf45lo)
+- [MEV articles](https://thedailyape.notion.site/MEV-8713cb4c2df24f8483a02135d657a221)
+- [Awesome MEV Resources](https://github.com/0xalpharush/awesome-MEV-resources)
+- [Flash Boys 2.0: Frontrunning, Transaction Reordering, and Consensus Instability in Decentralized Exchanges](https://arxiv.org/pdf/1904.05234.pdf)
+- [High-Frequency Trading on Decentralized On-Chain Exchanges](https://arxiv.org/pdf/2009.14021.pdf)
+- [The 0 to 1 Guide for MEV](https://calblockchain.mirror.xyz/c56CHOu-Wow_50qPp2Wlg0rhUvdz1HLbGSUWlB_KX9o)
 
 ### Bot examples
-- (liquidiation-bot-fall-2020)[https://github.com/fxfactorial/liquidation-bot-fall-2020]
-- (Supercycled's cake_sniper twitter thread)[https://twitter.com/_supercycled/status/1414538498477072390]
+- [liquidiation-bot-fall-2020](https://github.com/fxfactorial/liquidation-bot-fall-2020)
+- [Supercycled's cake_sniper twitter thread](https://twitter.com/_supercycled/status/1414538498477072390)
+- [Pancakeswap Bot](https://github.com/Nafidinara/bot-pancakeswap)
 
 ---
 
