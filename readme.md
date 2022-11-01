@@ -394,6 +394,7 @@ https://line25.com/articles/persuasive-design-101
 - [Solidity + Yul tips + tricks](https://twitter.com/controlcthenv/status/1475260262131417098?s=28)
 - [Yul+ Smart Contract Development](https://www.libevm.com/2021/12/18/yulp-smart-contract-dev/)
 - [Assembly code (tricks)](https://t.co/Vih7tJ8jEQ?ssr=true)
+- [Solidity Tutorial : all about Assembly](https://jeancvllr.medium.com/solidity-tutorial-all-about-assembly-5acdfefde05c)
 - [Data Representation in Solidity](https://ethdebug.github.io/solidity-data-representation/)
 - [Good overview of gas optimizations (MSTORE, MLOAD, SSTORE, SLOAD](https://medium.com/goldfinch-fi/solidity-learnings-how-to-save-50-on-gas-costs-5e598c364ab2)
 - [Daniele Sesta on popscile finance and MIM, SPELL](https://www.youtube.com/watch?v=Pw6ch5c89Iw)
@@ -408,7 +409,13 @@ https://line25.com/articles/persuasive-design-101
 - [Into to nft collection launches](https://metaversal.banklesshq.com/p/intro-to-nft-collection-launches)
 - [Diving Into The Ethereum VM Part 2 — How I Learned To Start Worrying And Count The Storage Cost](https://medium.com/@hayeah/diving-into-the-ethereum-vm-part-2-storage-layout-bc5349cb11b7)
 - [Ultimate DeFi and Blockchain Research Base](https://github.com/OffcierCia/ultimate-defi-research-base#security--safety)
-
+- [Ethereum EIP-165 Explained](https://medium.com/@chiqing/ethereum-standard-erc165-explained-63b54ca0d273)
+- [EIP-165 (includes how interfaces are identified)](https://eips.ethereum.org/EIPS/eip-165)
+- [Obtaining ERC-721 Interface IDs](https://ethereum.stackexchange.com/questions/82822/obtaining-erc721-interface-ids)
+- [Calling the function of another contract in solidity](https://medium.com/@blockchain101/calling-the-function-of-another-contract-in-solidity-f9edfa921f4c)
+- [Solidity: revert w/ custom errors](https://medium.com/coinmonks/solidity-revert-with-custom-error-explained-with-example-d9dff8937ef4)
+- [Custom Errors in Solidity](https://blog.soliditylang.org/2021/04/21/custom-errors/)
+- [Keywords: memory + storage](https://ethereum.stackexchange.com/questions/66382/switching-from-storage-to-memory-increases-the-gas-cost)
 
 ### Security
 - [Ethereum 101](https://secureum.substack.com/p/ethereum-101)
